@@ -1,4 +1,4 @@
-# 📄 Persona-Driven Document Analyst
+# 📄 Persona-Driven Document Analyst - Core Prototype
 
 ## 🧠 Objective
 
