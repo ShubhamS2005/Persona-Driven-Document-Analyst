@@ -1,11 +1,14 @@
 from sentence_transformers import SentenceTransformer
-import numpy as np
+import torch
+
 
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 
+
 class EmbeddingModel:
+
 
     def __init__(self):
 
@@ -13,21 +16,22 @@ class EmbeddingModel:
             "Loading embedding model..."
         )
 
+
         self.model = SentenceTransformer(
-            MODEL_NAME
+            MODEL_NAME,
+            device="cpu"
         )
 
 
-    def generate_embeddings(self, texts):
-
-        print(
-            f"Generating embeddings for {len(texts)} chunks..."
-        )
+    def generate_embeddings(
+        self,
+        texts
+    ):
 
 
         embeddings = self.model.encode(
             texts,
-            batch_size=32,
+            batch_size=16,
             show_progress_bar=True,
             convert_to_numpy=True,
             normalize_embeddings=True
@@ -35,3 +39,22 @@ class EmbeddingModel:
 
 
         return embeddings
+
+
+
+    def encode_query(
+        self,
+        query
+    ):
+
+
+        embedding = self.model.encode(
+            [query],
+            convert_to_numpy=True,
+            normalize_embeddings=True
+        )
+
+
+        return embedding.astype(
+            "float32"
+        )
