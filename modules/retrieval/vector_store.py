@@ -8,13 +8,28 @@ import os
 class VectorStore:
 
 
-
     def __init__(
         self,
         path="data/vector_store"
     ):
 
-        self.path=path
+        self.path = path
+
+        self.index_path = os.path.join(
+            self.path,
+            "faiss.index"
+        )
+
+        self.embeddings_path = os.path.join(
+            self.path,
+            "embeddings.npy"
+        )
+
+        self.chunks_path = os.path.join(
+            self.path,
+            "chunks.pkl"
+        )
+
 
         os.makedirs(
             self.path,
@@ -52,7 +67,6 @@ class VectorStore:
 
 
 
-
     def save(
         self,
         index,
@@ -63,18 +77,18 @@ class VectorStore:
 
         faiss.write_index(
             index,
-            f"{self.path}/faiss.index"
+            self.index_path
         )
 
 
         np.save(
-            f"{self.path}/embeddings.npy",
+            self.embeddings_path,
             embeddings
         )
 
 
         with open(
-            f"{self.path}/chunks.pkl",
+            self.chunks_path,
             "wb"
         ) as f:
 
@@ -90,21 +104,55 @@ class VectorStore:
 
 
 
-
     def load(self):
 
 
+        print(
+            "Loading FAISS index..."
+        )
+
+
         index = faiss.read_index(
-            f"{self.path}/faiss.index"
+            self.index_path
+        )
+
+
+        print(
+            "Loading embeddings..."
+        )
+
+
+        embeddings = np.load(
+            self.embeddings_path
+        )
+
+
+
+        print(
+            "Loading chunks..."
         )
 
 
         with open(
-            f"{self.path}/chunks.pkl",
+            self.chunks_path,
             "rb"
         ) as f:
 
-            chunks=pickle.load(f)
+            chunks = pickle.load(f)
 
 
-        return index,chunks
+
+        print(
+            "Loaded:",
+            index.ntotal,
+            "vectors and",
+            len(chunks),
+            "chunks"
+        )
+
+
+        return (
+            index,
+            embeddings,
+            chunks
+        )

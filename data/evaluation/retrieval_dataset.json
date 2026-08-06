@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "query":"What are the historical sites in Carcassonne?",
+        "expected_keywords":[
+            "Cité de Carcassonne",
+            "Château Comtal",
+            "Basilica"
+        ]
+    },
+
+
+    {
+        "id":2,
+        "query":"What places should I visit in South France?",
+        "expected_keywords":[
+            "Nice",
+            "Marseille",
+            "Avignon"
+        ]
+    },
+
+
+    {
+        "id":3,
+        "query":"Explain medieval architecture of Carcassonne",
+        "expected_keywords":[
+            "double walls",
+            "52 towers",
+            "castle"
+        ]
+    }
+]
