@@ -1,0 +1,2971 @@
+[
+  {
+    "id": 0,
+    "text": "pancakes ingredients : 1 cup all - purpose flour 2 tablespoons sugar 1 teaspoon baking powder 1 / 2 teaspoon baking soda 1 / 4 teaspoon salt 1 cup buttermilk 1 large egg 2 tablespoons melted butter 1 teaspoon vanilla extract",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Pancakes Ingredients:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 0,
+      "token_count": 55,
+      "entities": [],
+      "keywords": [
+        "teaspoon",
+        "tablespoon",
+        "ingredient",
+        "purpose",
+        "flour",
+        "sugar",
+        "powder",
+        "soda",
+        "salt",
+        "butter"
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "text": "instructions : in a bowl, whisk together flour, sugar, baking powder, baking soda, and salt. in another bowl, combine buttermilk, egg, melted butter, and vanilla extract. pour the wet ingredients into the dry ingredients and stir until just combined. heat a non - stick skillet over medium heat and lightly grease it. pour 1 / 4 cup of batter onto the skillet for each pancake. cook until bubbles form on the surface, then flip and cook until golden brown. serve with syrup and your favorite toppings.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 1,
+      "token_count": 111,
+      "entities": [
+        "cook"
+      ],
+      "keywords": [
+        "bowl",
+        "ingredient",
+        "skillet",
+        "flour",
+        "sugar",
+        "powder",
+        "soda",
+        "salt",
+        "buttermilk",
+        "butter"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "text": "instructions : in a bowl, whisk together eggs, milk, salt, and pepper. heat a non - stick skillet over medium heat and melt the butter. pour the egg mixture into the skillet. cook, stirring gently, until the eggs are set but still soft. serve immediately.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 2,
+      "token_count": 60,
+      "entities": [
+        "cook"
+      ],
+      "keywords": [
+        "egg",
+        "skillet",
+        "bowl",
+        "milk",
+        "salt",
+        "pepper",
+        "stick",
+        "heat",
+        "butter",
+        "mixture"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "text": "instructions : in a shallow dish, whisk together eggs, milk, vanilla extract, and cinnamon. dip each slice of bread into the egg mixture, coating both sides. heat a non - stick skillet over medium heat and melt the butter. cook the bread slices until golden brown on both sides. serve with syrup and powdered sugar.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 3,
+      "token_count": 69,
+      "entities": [],
+      "keywords": [
+        "slice",
+        "bread",
+        "side",
+        "dish",
+        "egg",
+        "milk",
+        "vanilla",
+        "extract",
+        "cinnamon",
+        "mixture"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "text": "instructions : in a bowl, whisk the eggs and cook them in a skillet over medium heat. add cheese, sausage or bacon, bell pepper, and onion to the eggs. cook until the eggs are set and the vegetables are tender. place the egg mixture in the center of the tortilla and roll it up. serve with salsa.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 4,
+      "token_count": 71,
+      "entities": [
+        "bell pepper"
+      ],
+      "keywords": [
+        "egg",
+        "bowl",
+        "skillet",
+        "heat",
+        "cheese",
+        "sausage",
+        "bacon",
+        "bell",
+        "pepper",
+        "onion"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "text": "instructions : in a saucepan, bring water or milk to a boil. add oats and salt, reduce heat to low, and simmer for 5 minutes, stirring occasionally. remove from heat and let sit for a few minutes. serve with your favorite toppings.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 5,
+      "token_count": 54,
+      "entities": [],
+      "keywords": [
+        "heat",
+        "minute",
+        "saucepan",
+        "water",
+        "milk",
+        "boil",
+        "oats",
+        "salt",
+        "topping"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "text": "instructions : cook the egg in a skillet over medium heat, seasoning with salt and pepper. place the cheese on top of the egg to melt. assemble the sandwich with the egg, cheese, and ham or bacon between the english muffin halves.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 6,
+      "token_count": 51,
+      "entities": [],
+      "keywords": [
+        "cheese",
+        "skillet",
+        "heat",
+        "salt",
+        "pepper",
+        "sandwich",
+        "bacon",
+        "muffin",
+        "half"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "text": "instructions : in a bowl, whisk together chia seeds, almond milk, honey or maple syrup, and vanilla extract. cover and refrigerate for at least 4 hours or overnight. stir well before serving and top with your favorite toppings.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 7,
+      "token_count": 52,
+      "entities": [],
+      "keywords": [
+        "bowl",
+        "chia",
+        "seed",
+        "almond",
+        "milk",
+        "honey",
+        "maple",
+        "syrup",
+        "vanilla",
+        "extract"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "text": "instructions : in a bowl, whisk the eggs and cook them in a skillet over medium heat. add cheese, sausage or bacon, and bell pepper to the eggs. cook until the eggs are set and the vegetables are tender. place the egg mixture on one half of the tortilla and fold the other half over. cook in the skillet until the tortilla is golden brown and crispy. serve with salsa.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 6,
+      "chunk_index": 8,
+      "token_count": 88,
+      "entities": [],
+      "keywords": [
+        "egg",
+        "skillet",
+        "half",
+        "tortilla",
+        "bowl",
+        "heat",
+        "cheese",
+        "sausage",
+        "bacon",
+        "bell"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "text": "banana bread ingredients : 3 ripe bananas, mashed 1 / 3 cup melted butter 1 / 2 cup sugar 1 large egg, beaten 1 teaspoon vanilla extract 1 teaspoon baking soda pinch of salt 1 1 / 2 cups all - purpose flour",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Banana Bread Ingredients:",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 9,
+      "token_count": 50,
+      "entities": [],
+      "keywords": [
+        "banana",
+        "teaspoon",
+        "bread",
+        "ingredient",
+        "butter",
+        "sugar",
+        "vanilla",
+        "soda",
+        "pinch",
+        "salt"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "text": "instructions : preheat oven to 350°f ( 175°c ). in a bowl, mix mashed bananas and melted butter. add sugar, beaten egg, and vanilla extract, and mix well. stir in baking soda, salt, and flour until just combined. pour the batter into a greased loaf pan. bake for 60 minutes or until a toothpick inserted into the center comes out clean. let cool before slicing.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 10,
+      "token_count": 89,
+      "entities": [
+        "bake"
+      ],
+      "keywords": [
+        "bowl",
+        "banana",
+        "butter",
+        "sugar",
+        "vanilla",
+        "extract",
+        "soda",
+        "salt",
+        "flour",
+        "batter"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "text": "instructions : in a bowl, whisk the eggs and cook them in a skillet over medium heat. add cheese, sausage or bacon, onions and bell pepper to the eggs. cook until the eggs are set and the vegetables are tender. divide the egg mixture between the tortillas. serve with salsa.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 11,
+      "token_count": 63,
+      "entities": [],
+      "keywords": [
+        "egg",
+        "bowl",
+        "skillet",
+        "heat",
+        "cheese",
+        "sausage",
+        "bacon",
+        "onion",
+        "bell",
+        "pepper"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "text": "instructions : preheat oven to 350°f ( 175°c ). in a bowl, mix oats, honey or maple syrup, peanut butter, nuts, dried fruit, and vanilla extract. press the mixture into a greased baking dish. bake for 20 - 25 minutes or until golden brown. let cool before cutting into bars.",
+    "metadata": {
+      "document": "Breakfast Ideas.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 7,
+      "page_end": 7,
+      "chunk_index": 12,
+      "token_count": 70,
+      "entities": [
+        "bake"
+      ],
+      "keywords": [
+        "bowl",
+        "oats",
+        "honey",
+        "maple",
+        "syrup",
+        "peanut",
+        "butter",
+        "nut",
+        "fruit",
+        "vanilla"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "text": "ingredients : 1 pound beef sirloin, thinly sliced 1 small onion, diced 2 cloves garlic, minced 1 cup mushrooms, sliced 1 cup beef broth 1 cup sour cream 2 tablespoons flour 2 tablespoons butter 1 teaspoon paprika salt and pepper to taste egg noodles or rice for serving",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 13,
+      "token_count": 68,
+      "entities": [],
+      "keywords": [
+        "beef",
+        "tablespoon",
+        "ingredient",
+        "pound",
+        "sirloin",
+        "onion",
+        "mushroom",
+        "broth",
+        "cream",
+        "flour"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "text": "instructions : in a large skillet, melt butter over medium heat. add diced onion and minced garlic, saute until translucent. add sliced beef and cook until browned. stir in mushrooms and cook until tender. sprinkle flour over the mixture and stir to combine. gradually add beef broth, stirring constantly until the sauce thickens. stir in sour cream and paprika, season with salt and pepper. simmer for a few minutes until heated through. serve over egg noodles or rice.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 14,
+      "token_count": 103,
+      "entities": [],
+      "keywords": [
+        "beef",
+        "skillet",
+        "butter",
+        "heat",
+        "onion",
+        "garlic",
+        "saute",
+        "cook",
+        "mushroom",
+        "tender"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "text": "ingredients : 4 boneless, skinless chicken breasts 1 cup breadcrumbs 1 / 2 cup grated parmesan cheese 1 cup marinara sauce 1 cup mozzarella cheese, shredded 2 eggs, beaten 1 / 2 cup flour 1 / 4 cup olive oil salt and pepper to taste",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 15,
+      "token_count": 59,
+      "entities": [],
+      "keywords": [
+        "cheese",
+        "ingredient",
+        "boneless",
+        "skinless",
+        "chicken",
+        "breast",
+        "breadcrumb",
+        "marinara",
+        "sauce",
+        "mozzarella"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "text": "instructions : preheat oven to 375°f ( 190°c ). season chicken breasts with salt and pepper. dredge chicken in flour, dip in beaten eggs, and coat with a mixture of breadcrumbs and grated parmesan cheese. heat olive oil in a skillet over medium heat. cook chicken until golden brown on both sides. place chicken in a baking dish, top with marinara sauce and shredded mozzarella cheese. bake for 20 - 25 minutes until cheese is melted and bubbly. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 2,
+      "page_end": 3,
+      "chunk_index": 16,
+      "token_count": 110,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "cheese",
+        "heat",
+        "season",
+        "breast",
+        "salt",
+        "pepper",
+        "dredge",
+        "flour",
+        "egg"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "text": "spaghetti bolognese ingredients : 1 pound ground beef 1 small onion, diced 2 cloves garlic, minced 1 carrot, grated 1 celery stalk, diced 1 can ( 28 ounces ) crushed tomatoes 1 / 4 cup tomato paste 1 / 2 cup red wine ( optional ) 1 teaspoon dried oregano 1 teaspoon dried basil salt and pepper to taste spaghetti for serving grated parmesan cheese for garnish",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Spaghetti Bolognese Ingredients:",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 17,
+      "token_count": 92,
+      "entities": [],
+      "keywords": [
+        "spaghetti",
+        "tomato",
+        "teaspoon",
+        "ingredient",
+        "pound",
+        "ground",
+        "beef",
+        "onion",
+        "carrot",
+        "celery"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "text": "instructions : in a large skillet, cook ground beef over medium heat until browned. add diced onion, minced garlic, grated carrot, and diced celery, saute until vegetables are tender. stir in crushed tomatoes, tomato paste, red wine ( if using ), oregano, basil, salt, and pepper. simmer for 30 minutes, stirring occasionally. cook spaghetti according to package instructions. serve bolognese sauce over spaghetti, garnished with grated parmesan cheese.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 18,
+      "token_count": 105,
+      "entities": [
+        "serve"
+      ],
+      "keywords": [
+        "tomato",
+        "spaghetti",
+        "skillet",
+        "ground",
+        "beef",
+        "heat",
+        "onion",
+        "garlic",
+        "carrot",
+        "celery"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "text": "ingredients : 4 boneless, skinless chicken thighs 1 / 4 cup soy sauce 1 / 4 cup mirin 2 tablespoons sugar 1 tablespoon sake 1 teaspoon grated ginger 1 teaspoon minced garlic 1 tablespoon vegetable oil cooked rice for serving sliced green onions for garnish",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 3,
+      "page_end": 4,
+      "chunk_index": 19,
+      "token_count": 63,
+      "entities": [],
+      "keywords": [
+        "tablespoon",
+        "teaspoon",
+        "ingredient",
+        "boneless",
+        "skinless",
+        "chicken",
+        "thighs",
+        "sauce",
+        "mirin",
+        "sugar"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "text": "instructions : in a bowl, mix soy sauce, mirin, sugar, sake, grated ginger, and minced garlic. marinate chicken thighs in the mixture for at least 30 minutes. heat vegetable oil in a skillet over medium heat. cook chicken thighs until browned and cooked through. pour marinade into the skillet and simmer until thickened. serve chicken over cooked rice, garnished with sliced green onions.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 20,
+      "token_count": 88,
+      "entities": [
+        "pour marinade"
+      ],
+      "keywords": [
+        "chicken",
+        "thigh",
+        "heat",
+        "skillet",
+        "bowl",
+        "sauce",
+        "mirin",
+        "sugar",
+        "sake",
+        "ginger"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "text": "shrimp scampi ingredients : 1 pound large shrimp, peeled and deveined 4 cloves garlic, minced 1 / 4 cup white wine 1 / 4 cup chicken broth 1 / 4 cup lemon juice 1 / 4 cup butter 2 tablespoons olive oil 1 / 4 cup chopped parsley salt and pepper to taste cooked pasta for serving",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Shrimp Scampi Ingredients:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 21,
+      "token_count": 70,
+      "entities": [],
+      "keywords": [
+        "shrimp",
+        "scampi",
+        "ingredient",
+        "pound",
+        "garlic",
+        "wine",
+        "chicken",
+        "broth",
+        "lemon",
+        "juice"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "text": "instructions : heat olive oil and butter in a large skillet over medium heat. add minced garlic and saute until fragrant. add shrimp and cook until pink and opaque. remove shrimp from the skillet and set aside. pour white wine, chicken broth, and lemon juice into the skillet, simmer until reduced by half. return shrimp to the skillet and toss to coat in the sauce. season with salt and pepper, stir in chopped parsley. serve over cooked pasta.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 22,
+      "token_count": 100,
+      "entities": [],
+      "keywords": [
+        "skillet",
+        "shrimp",
+        "heat",
+        "olive",
+        "butter",
+        "garlic",
+        "saute",
+        "opaque",
+        "wine",
+        "chicken"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "text": "ingredients : 1 pound ground beef 1 small onion, diced 2 cloves garlic, minced 1 packet taco seasoning 1 / 2 cup water taco shells or tortillas shredded lettuce, diced tomatoes, shredded cheese, sour cream, and salsa for toppings",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 4,
+      "page_end": 5,
+      "chunk_index": 23,
+      "token_count": 58,
+      "entities": [
+        "taco",
+        "tortillas shredded lettuce"
+      ],
+      "keywords": [
+        "taco",
+        "ingredient",
+        "pound",
+        "ground",
+        "beef",
+        "onion",
+        "packet",
+        "seasoning",
+        "water",
+        "shell"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "text": "instructions : in a skillet, cook ground beef over medium heat until browned. add diced onion and minced garlic, saute until softened. stir in taco seasoning and water, simmer until thickened. serve beef mixture in taco shells or tortillas with desired toppings.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 24,
+      "token_count": 62,
+      "entities": [
+        "taco"
+      ],
+      "keywords": [
+        "beef",
+        "taco",
+        "skillet",
+        "ground",
+        "heat",
+        "onion",
+        "garlic",
+        "saute",
+        "seasoning",
+        "water"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "text": "lasagna ingredients : 1 pound ground beef 1 small onion, diced 2 cloves garlic, minced 1 jar ( 24 ounces ) marinara sauce 1 can ( 15 ounces ) ricotta cheese 1 egg 1 / 4 cup grated parmesan cheese 1 teaspoon dried basil 1 teaspoon dried oregano 9 lasagna noodles, cooked 2 cups shredded mozzarella cheese",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Lasagna Ingredients:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 25,
+      "token_count": 82,
+      "entities": [],
+      "keywords": [
+        "cheese",
+        "lasagna",
+        "ounce",
+        "teaspoon",
+        "ingredient",
+        "pound",
+        "ground",
+        "beef",
+        "onion",
+        "marinara"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "text": "instructions : preheat oven to 375°f ( 190°c ). in a skillet, cook ground beef, diced onion, and minced garlic until browned. stir in marinara sauce and simmer for 10 minutes. in a bowl, mix ricotta cheese, egg, grated parmesan cheese, basil, and oregano. spread a thin layer of meat sauce in a baking dish. layer with 3 lasagna noodles, 1 / 3 of the ricotta mixture, 1 / 3 of the meat sauce, and 1 / 3 of the shredded mozzarella cheese. repeat layers twice more. cover with foil and bake for 25 minutes. remove foil and bake for an additional 25 minutes until cheese is melted and bubbly. let stand for 10 minutes before serving.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 26,
+      "token_count": 163,
+      "entities": [],
+      "keywords": [
+        "minute",
+        "cheese",
+        "sauce",
+        "ricotta",
+        "layer",
+        "meat",
+        "foil",
+        "skillet",
+        "ground",
+        "beef"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "text": "ingredients : 4 boneless, skinless chicken breasts 1 pound fettuccine 1 cup heavy cream 1 / 2 cup grated parmesan cheese 1 / 4 cup butter 8 ounces rice noodles 1 / 2 pound shrimp or chicken 2 eggs 1 cup bean sprouts 1 / 4 cup peanuts, chopped 2 tablespoons fish sauce 2 tablespoons tamarind paste 1 tablespoon sugar 1 tablespoon lime juice 1 / 4 cup green onions, chopped 2 tablespoons vegetable oil",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 5,
+      "page_end": 7,
+      "chunk_index": 27,
+      "token_count": 101,
+      "entities": [],
+      "keywords": [
+        "tablespoon",
+        "chicken",
+        "pound",
+        "ingredient",
+        "boneless",
+        "skinless",
+        "breast",
+        "fettuccine",
+        "cream",
+        "parmesan"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "text": "instructions : soak rice noodles in warm water until softened, then drain. saute shrimp or chicken in vegetable oil until cooked, then set aside. scramble eggs in the same pan. add noodles, fish sauce, tamarind paste, sugar, and lime juice, stir to combine. add bean sprouts, cooked shrimp or chicken, and chopped green onions. garnish with chopped peanuts and serve.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 7,
+      "page_end": 7,
+      "chunk_index": 28,
+      "token_count": 83,
+      "entities": [],
+      "keywords": [
+        "noodle",
+        "shrimp",
+        "chicken",
+        "rice",
+        "water",
+        "saute",
+        "egg",
+        "fish",
+        "sauce",
+        "tamarind"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "text": "beef bourguignon ingredients : 2 pounds beef chuck, cut into cubes 1 small onion, diced 2 cloves garlic, minced 1 cup red wine 2 cups beef broth 1 cup mushrooms, sliced 1 cup carrots, sliced 1 cup pearl onions 2 tablespoons tomato paste 2 tablespoons flour 2 tablespoons butter 1 teaspoon thyme 1 bay leaf salt and pepper to taste",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Beef Bourguignon Ingredients:",
+      "page_start": 7,
+      "page_end": 7,
+      "chunk_index": 29,
+      "token_count": 84,
+      "entities": [
+        "chuck"
+      ],
+      "keywords": [
+        "beef",
+        "tablespoon",
+        "onion",
+        "bourguignon",
+        "ingredient",
+        "pound",
+        "chuck",
+        "cube",
+        "wine",
+        "cup"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "text": "instructions : preheat oven to 350°f ( 175°c ). in a large pot, melt butter over medium heat. add diced onion and minced garlic, saute until translucent. add beef cubes and cook until browned on all sides. sprinkle flour over the beef and stir to combine. add red wine, beef broth, tomato paste, thyme, and bay leaf. bring to a simmer, then cover and transfer to the oven. cook for 2 hours, adding mushrooms, carrots, and pearl onions in the last 30 minutes. season with salt and pepper to taste. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 7,
+      "page_end": 8,
+      "chunk_index": 30,
+      "token_count": 129,
+      "entities": [],
+      "keywords": [
+        "beef",
+        "onion",
+        "butter",
+        "heat",
+        "garlic",
+        "saute",
+        "cube",
+        "cook",
+        "side",
+        "flour"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "text": "chicken cacciatore ingredients : 4 boneless, skinless chicken thighs 1 small onion, diced 2 cloves garlic, minced 1 bell pepper, sliced 1 can ( 14. 5 ounces ) diced tomatoes 1 / 2 cup chicken broth 1 / 4 cup red wine 1 teaspoon dried oregano 1 teaspoon dried basil 1 / 4 cup olives, sliced 2 tablespoons olive oil salt and pepper to taste",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Chicken Cacciatore Ingredients:",
+      "page_start": 8,
+      "page_end": 8,
+      "chunk_index": 31,
+      "token_count": 91,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "pepper",
+        "teaspoon",
+        "olive",
+        "cacciatore",
+        "ingredient",
+        "boneless",
+        "skinless",
+        "thigh",
+        "onion"
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "text": "instructions : in a large skillet, heat olive oil over medium heat. add chicken thighs and cook until browned on both sides, then set aside. in the same skillet, saute diced onion, minced garlic, and sliced bell pepper until softened. stir in diced tomatoes, chicken broth, red wine, oregano, basil, and olives. return chicken to the skillet and simmer for 30 minutes until chicken is cooked through. season with salt and pepper to taste. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 8,
+      "page_end": 8,
+      "chunk_index": 32,
+      "token_count": 105,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "skillet",
+        "heat",
+        "olive",
+        "pepper",
+        "thigh",
+        "cook",
+        "side",
+        "saute",
+        "onion"
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "text": "ingredients : 4 boneless, skinless chicken breasts 1 cup mushrooms, sliced 1 / 2 cup marsala wine 1 / 2 cup chicken broth 1 / 4 cup flour 2 tablespoons butter 2 tablespoons olive oil salt and pepper to taste chopped parsley for garnish",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 8,
+      "page_end": 8,
+      "chunk_index": 33,
+      "token_count": 57,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "tablespoon",
+        "ingredient",
+        "boneless",
+        "skinless",
+        "breast",
+        "mushroom",
+        "marsala",
+        "wine",
+        "broth"
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "text": "instructions : preheat oven to 375°f ( 190°c ). in a large baking dish, layer diced eggplant, zucchini, bell pepper, onion, and tomatoes. in a bowl, mix minced garlic, olive oil, thyme, rosemary, salt, and pepper. pour the mixture over the vegetables and toss to coat. bake for 45 minutes until vegetables are tender. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 1,
+      "page_end": 1,
+      "chunk_index": 34,
+      "token_count": 87,
+      "entities": [
+        "bell pepper"
+      ],
+      "keywords": [
+        "pepper",
+        "vegetable",
+        "baking",
+        "dish",
+        "layer",
+        "zucchini",
+        "bell",
+        "onion",
+        "tomato",
+        "bowl"
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "text": "instructions : preheat oven to 375°f ( 190°c ). season the chicken with salt and pepper. stuff the cavity with lemon halves and minced garlic. in a bowl, mix olive oil, chopped rosemary, and chopped thyme. brush the mixture over the chicken. place the chicken in a roasting pan and roast for 1 hour and 30 minutes until cooked through. let rest before carving and serving.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 1,
+      "page_end": 1,
+      "chunk_index": 35,
+      "token_count": 85,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "season",
+        "salt",
+        "pepper",
+        "stuff",
+        "cavity",
+        "lemon",
+        "half",
+        "garlic",
+        "bowl"
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "text": "ingredients : 1 pound shrimp, peeled and deveined 1 cup grits 4 cups water 1 / 2 cup cheddar cheese, shredded 1 / 4 cup butter 1 small onion, diced 2 cloves garlic, minced 1 / 4 cup bacon, chopped 1 / 4 cup green onions, sliced salt and pepper to taste",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 1,
+      "page_end": 2,
+      "chunk_index": 36,
+      "token_count": 67,
+      "entities": [],
+      "keywords": [
+        "onion",
+        "ingredient",
+        "pound",
+        "shrimp",
+        "grit",
+        "cup",
+        "water",
+        "cheddar",
+        "cheese",
+        "butter"
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "text": "instructions : in a pot, bring water to a boil and stir in grits. reduce heat and simmer until thickened, then stir in shredded cheddar cheese and butter. in a skillet, cook chopped bacon until crispy, then set aside. in the same skillet, saute diced onion and minced garlic until softened. add shrimp and cook until pink and opaque. stir in cooked bacon and sliced green onions. serve shrimp mixture over grits.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 37,
+      "token_count": 96,
+      "entities": [],
+      "keywords": [
+        "grit",
+        "skillet",
+        "bacon",
+        "onion",
+        "shrimp",
+        "water",
+        "boil",
+        "heat",
+        "simmer",
+        "cheddar"
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "text": "spaghetti carbonara ingredients : 1 pound spaghetti 4 eggs 1 cup grated parmesan cheese 1 / 2 cup pancetta, diced 2 cloves garlic, minced 1 / 4 cup heavy cream ( optional ) salt and pepper to taste chopped parsley for garnish",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Spaghetti Carbonara Ingredients:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 38,
+      "token_count": 57,
+      "entities": [],
+      "keywords": [
+        "spaghetti",
+        "carbonara",
+        "ingredient",
+        "pound",
+        "egg",
+        "parmesan",
+        "cheese",
+        "pancetta",
+        "garlic",
+        "cream"
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "text": "instructions : cook spaghetti according to package instructions. in a skillet, cook diced pancetta until crispy, then set aside. in a bowl, whisk eggs, grated parmesan cheese, and heavy cream ( if using ). in the same skillet, saute minced garlic until fragrant. add cooked spaghetti and toss to coat. remove from heat and quickly stir in the egg mixture, pancetta, salt, and pepper. garnish with chopped parsley and serve.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 39,
+      "token_count": 105,
+      "entities": [],
+      "keywords": [
+        "spaghetti",
+        "skillet",
+        "pancetta",
+        "package",
+        "crispy",
+        "bowl",
+        "whisk",
+        "egg",
+        "cheese",
+        "cream"
+      ]
+    }
+  },
+  {
+    "id": 40,
+    "text": "ingredients : 4 bell peppers, tops cut off and seeds removed 1 pound ground beef 1 small onion, diced 2 cloves garlic, minced 1 cup cooked rice 1 can ( 14. 5 ounces ) diced tomatoes 1 cup shredded cheese 1 teaspoon oregano 1 teaspoon basil 2 tablespoons olive oil salt and pepper to taste",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 2,
+      "page_end": 3,
+      "chunk_index": 40,
+      "token_count": 72,
+      "entities": [],
+      "keywords": [
+        "pepper",
+        "teaspoon",
+        "ingredient",
+        "bell",
+        "top",
+        "seed",
+        "pound",
+        "ground",
+        "beef",
+        "onion"
+      ]
+    }
+  },
+  {
+    "id": 41,
+    "text": "ingredients : 1 pound pork tenderloin, cubed 1 bell pepper, diced 1 small onion, diced 1 / 2 cup pineapple chunks 1 / 4 cup ketchup 1 / 4 cup rice vinegar 1 / 4 cup soy sauce 1 / 4 cup brown sugar 2 tablespoons cornstarch 2 tablespoons vegetable oil cooked rice for serving",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 41,
+      "token_count": 72,
+      "entities": [],
+      "keywords": [
+        "rice",
+        "tablespoon",
+        "ingredient",
+        "pound",
+        "pork",
+        "tenderloin",
+        "bell",
+        "pepper",
+        "onion",
+        "pineapple"
+      ]
+    }
+  },
+  {
+    "id": 42,
+    "text": "instructions : in a bowl, toss pork cubes with cornstarch. heat vegetable oil in a skillet over medium heat. cook pork until browned and crispy, then set aside. in the same skillet, saute diced onion and bell pepper until softened. stir in pineapple chunks, ketchup, rice vinegar, soy sauce, and brown sugar. return pork to the skillet and toss to coat in the sauce. serve over cooked rice.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 42,
+      "token_count": 95,
+      "entities": [],
+      "keywords": [
+        "pork",
+        "skillet",
+        "heat",
+        "rice",
+        "sauce",
+        "bowl",
+        "cube",
+        "cornstarch",
+        "vegetable",
+        "crispy"
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "text": "ingredients : 4 boneless, skinless chicken thighs 1 cup yogurt 2 tablespoons lemon juice 2 cloves garlic, minced 1 teaspoon grated ginger 1 teaspoon cumin 1 teaspoon coriander 1 teaspoon turmeric 1 teaspoon paprika 1 teaspoon garam masala 1 / 4 teaspoon cayenne pepper salt and pepper to taste",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 3,
+      "page_end": 4,
+      "chunk_index": 43,
+      "token_count": 86,
+      "entities": [],
+      "keywords": [
+        "teaspoon",
+        "pepper",
+        "ingredient",
+        "boneless",
+        "skinless",
+        "chicken",
+        "thigh",
+        "yogurt",
+        "tablespoon",
+        "lemon"
+      ]
+    }
+  },
+  {
+    "id": 44,
+    "text": "instructions : in a bowl, mix yogurt, lemon juice, minced garlic, grated ginger, cumin, coriander, turmeric, paprika, garam masala, cayenne pepper, salt, and pepper. marinate chicken thighs in the mixture for at least 1 hour. preheat oven to 400°f ( 200°c ). place chicken on a baking sheet and bake for 25 - 30 minutes until cooked through. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 44,
+      "token_count": 100,
+      "entities": [
+        "masala",
+        "cayenne pepper"
+      ],
+      "keywords": [
+        "pepper",
+        "chicken",
+        "bowl",
+        "yogurt",
+        "lemon",
+        "juice",
+        "garlic",
+        "ginger",
+        "cumin",
+        "coriander"
+      ]
+    }
+  },
+  {
+    "id": 45,
+    "text": "thai green curry ingredients : 1 pound chicken breast, cubed 1 small onion, diced 2 cloves garlic, minced 1 bell pepper, sliced 1 cup coconut milk 1 / 2 cup chicken broth 2 tablespoons green curry paste 1 tablespoon fish sauce 1 tablespoon brown sugar 1 / 4 cup fresh basil leaves 2 tablespoons vegetable oil cooked rice for serving",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Thai Green Curry Ingredients:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 45,
+      "token_count": 78,
+      "entities": [],
+      "keywords": [
+        "tablespoon",
+        "green",
+        "curry",
+        "chicken",
+        "thai",
+        "ingredient",
+        "pound",
+        "breast",
+        "onion",
+        "bell"
+      ]
+    }
+  },
+  {
+    "id": 46,
+    "text": "instructions : in a large skillet, heat vegetable oil over medium heat. cook diced onion and minced garlic until softened. add cubed chicken and cook until browned. stir in green curry paste, coconut milk, chicken broth, fish sauce, and brown sugar. add sliced bell pepper and simmer for 15 minutes until chicken is cooked through. stir in fresh basil leaves. serve over cooked rice.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 46,
+      "token_count": 83,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "heat",
+        "skillet",
+        "vegetable",
+        "onion",
+        "garlic",
+        "green",
+        "curry",
+        "paste",
+        "coconut"
+      ]
+    }
+  },
+  {
+    "id": 47,
+    "text": "ingredients : 1 pound ground turkey 1 small onion, diced 2 cloves garlic, minced 1 / 4 cup breadcrumbs 1 egg, beaten 1 / 4 cup grated parmesan cheese 1 teaspoon oregano 1 teaspoon basil salt and pepper to taste 2 tablespoons olive oil 1 jar ( 24 ounces ) marinara sauce",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Ingredients:",
+      "page_start": 4,
+      "page_end": 5,
+      "chunk_index": 47,
+      "token_count": 74,
+      "entities": [],
+      "keywords": [
+        "teaspoon",
+        "ingredient",
+        "pound",
+        "ground",
+        "turkey",
+        "onion",
+        "garlic",
+        "breadcrumb",
+        "cheese",
+        "oregano"
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "text": "instructions : in a bowl, mix ground turkey, diced onion, minced garlic, breadcrumbs, beaten egg, grated parmesan cheese, oregano, basil, salt, and pepper. form mixture into meatballs. in a skillet, heat olive oil over medium heat. cook meatballs until browned on all sides. add marinara sauce and simmer for 20 minutes until meatballs are cooked through. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 48,
+      "token_count": 91,
+      "entities": [
+        "cook"
+      ],
+      "keywords": [
+        "meatball",
+        "heat",
+        "bowl",
+        "ground",
+        "turkey",
+        "onion",
+        "breadcrumb",
+        "cheese",
+        "oregano",
+        "basil"
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "text": "vegetable stir - fry ingredients : 1 cup broccoli florets 1 cup bell peppers, sliced 1 cup snow peas 1 small onion, diced 2 cloves garlic, minced 2 tablespoons soy sauce 1 tablespoon oyster sauce 1 tablespoon sesame oil 1 teaspoon cornstarch 1 / 4 cup water cooked rice for serving",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Vegetable Stir-Fry Ingredients:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 49,
+      "token_count": 72,
+      "entities": [],
+      "keywords": [
+        "tablespoon",
+        "sauce",
+        "ingredient",
+        "floret",
+        "bell",
+        "pepper",
+        "snow",
+        "onion",
+        "oyster",
+        "sesame"
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "text": "instructions : in a small bowl, mix soy sauce, oyster sauce, sesame oil, cornstarch, and water. in a large skillet, heat sesame oil over medium heat. saute diced onion and minced garlic until fragrant. add broccoli, bell peppers, and snow peas, stir - fry until tender. pour sauce over the vegetables and cook until thickened. serve over cooked rice.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 50,
+      "token_count": 84,
+      "entities": [],
+      "keywords": [
+        "sauce",
+        "heat",
+        "bowl",
+        "oyster",
+        "cornstarch",
+        "water",
+        "skillet",
+        "sesame",
+        "saute",
+        "onion"
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "text": "vietnamese pho ingredients : 1 pound beef sirloin, thinly sliced 8 cups beef broth 1 small onion, sliced 2 cloves garlic, minced 1 piece ginger, sliced 2 star anise 1 cinnamon stick 1 tablespoon fish sauce 1 tablespoon soy sauce 8 ounces rice noodles fresh basil, cilantro, bean sprouts, lime wedges, and sliced jalapenos for garnish",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Vietnamese Pho Ingredients:",
+      "page_start": 5,
+      "page_end": 6,
+      "chunk_index": 51,
+      "token_count": 88,
+      "entities": [],
+      "keywords": [
+        "beef",
+        "tablespoon",
+        "sauce",
+        "ingredient",
+        "pound",
+        "sirloin",
+        "cup",
+        "broth",
+        "onion",
+        "clove"
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "text": "instructions : in a large pot, bring beef broth to a boil. add sliced onion, minced garlic, sliced ginger, star anise, and cinnamon stick. simmer for 30 minutes. stir in fish sauce and soy sauce. cook rice noodles according to package instructions. divide noodles and thinly sliced beef among bowls. pour hot broth over the top. garnish with fresh basil, cilantro, bean sprouts, lime wedges, and sliced jalapenos. serve immediately.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 52,
+      "token_count": 104,
+      "entities": [],
+      "keywords": [
+        "beef",
+        "broth",
+        "sauce",
+        "noodle",
+        "boil",
+        "onion",
+        "garlic",
+        "ginger",
+        "star",
+        "anise"
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "text": "instructions : in a bowl, mix soy sauce, mirin, sake, and sugar. marinate chicken pieces in the mixture for at least 30 minutes. thread chicken onto bamboo skewers. preheat grill to medium - high heat. grill chicken, brushing with marinade, until cooked through. garnish with sliced green onions and serve.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 53,
+      "token_count": 71,
+      "entities": [
+        "grill chicken"
+      ],
+      "keywords": [
+        "chicken",
+        "grill",
+        "bowl",
+        "sauce",
+        "mirin",
+        "sake",
+        "sugar",
+        "marinate",
+        "piece",
+        "mixture"
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "text": "instructions : preheat oven to 375°f ( 190°c ). in a large skillet, melt butter over medium heat. cook diced onion and minced garlic until softened. add cubed chicken and cook until browned. stir in flour and cook for 1 minute. gradually add chicken broth and milk, stirring constantly until thickened. add frozen peas and carrots, thyme, rosemary, salt, and pepper. pour mixture into a baking dish and top with pie crust. bake for 25 - 30 minutes until crust is golden. serve warm.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 54,
+      "token_count": 116,
+      "entities": [],
+      "keywords": [
+        "chicken",
+        "minute",
+        "crust",
+        "skillet",
+        "butter",
+        "heat",
+        "onion",
+        "garlic",
+        "flour",
+        "broth"
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "text": "chicken stir - fry ingredients : 1 pound chicken breast, sliced 1 cup broccoli florets 1 cup bell peppers, sliced 1 small onion, diced 2 cloves garlic, minced 2 tablespoons soy sauce 1 tablespoon oyster sauce 1 tablespoon sesame oil 1 teaspoon cornstarch 1 / 4 cup water cooked rice for serving",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Chicken Stir-Fry Ingredients:",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 55,
+      "token_count": 74,
+      "entities": [],
+      "keywords": [
+        "tablespoon",
+        "chicken",
+        "sauce",
+        "ingredient",
+        "pound",
+        "breast",
+        "broccoli",
+        "floret",
+        "bell",
+        "pepper"
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "text": "instructions : in a small bowl, mix soy sauce, oyster sauce, sesame oil, cornstarch, and water. in a large skillet, heat sesame oil over medium heat. cook sliced chicken until browned, then set aside. in the same skillet, saute diced onion and minced garlic until fragrant. add broccoli and bell peppers, stir - fry until tender. return chicken to the skillet and pour sauce over the top. cook until sauce is thickened. serve over cooked rice.",
+    "metadata": {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "source": "",
+      "section_title": "Instructions:",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 56,
+      "token_count": 106,
+      "entities": [
+        "cook"
+      ],
+      "keywords": [
+        "sauce",
+        "skillet",
+        "heat",
+        "chicken",
+        "bowl",
+        "oyster",
+        "cornstarch",
+        "water",
+        "sesame",
+        "cook"
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "text": "what ' s the best way to create a pdf? you can create pdfs from documents printed on paper, microsoft word documents, indesign® files, digital images, and more. different types of sources have different tools available for pdf conversion. in many applications, you can create pdfs by selecting the adobe pdf printer in the print dialog box. if a file is open in its authoring application ( such as a spreadsheet that is open in microsoft excel ), you can convert it to pdf without opening adobe acrobat. similarly, if acrobat is already open, you don ' t have to open the authoring application to convert a file to pdf. every pdf balances efficiency ( small file size ) and quality ( such as resolution and color ). if the balance between the file size and the quality is critical to your task, you must use an appropriate conversion method. for example, you can drag files to the acrobat icon to create pdfs. in this case, acrobat applies the most recently used conversion settings without providing access to those settings. if you want more control over the process, you ' ll want to use another method.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "source": "",
+      "section_title": "What's the best way to create a PDF?",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 57,
+      "token_count": 239,
+      "entities": [
+        "microsoft",
+        "don"
+      ],
+      "keywords": [
+        "file",
+        "acrobat",
+        "pdfs",
+        "conversion",
+        "application",
+        "document",
+        "microsoft",
+        "adobe",
+        "size",
+        "quality"
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "text": "balance pdf file size and quality you can select various settings to ensure that your pdf has the best balance between file size, resolution, conformity to specific standards, and other factors. the settings you select depend on your goals for the pdf that you are creating. for example, a pdf intended for high - quality commercial printing requires different settings than a pdf intended only for onscreen viewing and quick downloading over the internet. once selected, these settings apply across pdfmaker, acrobat, and acrobat distiller. however, some settings are limited to specific contexts or file types. for example, pdfmaker options can vary among the different types of microsoft office applications. for convenience, you can select one of the conversion presets available in acrobat. you can also create, define, save, and reuse custom presets that are uniquely suited to your purposes. for scanned documents, you can choose from autodetect color mode or several scanning presets that are optimized for scanning documents and images in color or black and white. you can modify these presets or use your own custom scanning settings. there are various ways to create a pdf file using acrobat. you can generate a pdf quickly using the convert to pdf tool, menu commands, dragging - and - dropping files onto the acrobat application icon, or converting clipboard data.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "source": "",
+      "section_title": "Balance PDF file size and quality",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 58,
+      "token_count": 281,
+      "entities": [
+        "microsoft office"
+      ],
+      "keywords": [
+        "setting",
+        "file",
+        "acrobat",
+        "preset",
+        "balance",
+        "size",
+        "quality",
+        "example",
+        "pdfmaker",
+        "type"
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "text": "note : when naming a pdf that ' s intended for electronic distribution, limit the filename to eight characters ( with no spaces ) and include the. pdf extension. this action ensures that email programs or network servers don ' t truncate the filename and that the pdf opens as expected.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "source": "",
+      "section_title": "Note:",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 59,
+      "token_count": 59,
+      "entities": [
+        "don"
+      ],
+      "keywords": [
+        "filename",
+        "distribution",
+        "character",
+        "space",
+        "extension",
+        "action",
+        "email",
+        "program",
+        "network",
+        "server"
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "text": "convert a file to pdf using the convert to pdf tool in acrobat, select all tools > convert to pdf. in the file explorer window that appears, select the file you want to convert to pdf, and select open. the selected file is converted to pdf and opens in acrobat. choose the hamburger menu > save or save as ( windows ), file > save or file > save as ( macos ), and then select a name and location for the pdf.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "source": "",
+      "section_title": "Convert a file to PDF using the Convert to PDF tool",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 60,
+      "token_count": 97,
+      "entities": [
+        "macos"
+      ],
+      "keywords": [
+        "file",
+        "tool",
+        "acrobat",
+        "window",
+        "save",
+        "convert",
+        "explorer",
+        "hamburger",
+        "menu",
+        "macos"
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "text": "drag - and - drop to create pdfs this method is best for small, simple files, such as small image files and plain text files, when the balance between file size and output quality is not important. you can use this technique with many other types of files, but you cannot adjust any conversion settings during the process. select the icons of one or more files in the windows explorer or macos finder. drag the file icons onto the acrobat application icon. or ( windows only ) drag the files into the open acrobat window. if a message appears saying that the file could not be opened in acrobat, then that file type cannot be converted to pdf by the drag - and - drop method. use one of the other conversion methods for that file.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "source": "",
+      "section_title": "Drag-and-drop to create PDFs",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 61,
+      "token_count": 157,
+      "entities": [
+        "macos finder"
+      ],
+      "keywords": [
+        "file",
+        "method",
+        "icon",
+        "window",
+        "acrobat",
+        "drop",
+        "type",
+        "conversion",
+        "pdfs",
+        "image"
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "text": "select visio layers to convert ( acrobat pro ) you can convert a visio drawing that contains layers to a pdf and retain some or all of the layers in the resulting pdf, or you can flatten the layers. you can also organize the visio layers in layer sets, which are folders in the acrobat layers panel. with the multilayered file open in visio, click a button in the adobe pdf toolbar, and select retain some layers in the selected page. note : if the retain some layers in the selected page option is not available, deselect the convert all pages in drawing option. select one or more layers in the layers in visio drawing list. to add the selected visio layers to the list of layers to convert to the pdf file, do one of the following : to convert the selected visio layers to individual pdf layers within a pdf layer set, click create layer set, and optionally, type a layer name. to convert the selected visio layers to individual layers ( but not grouped under a layer set ), click the add layer ( s ) button. note : the name of a layer in the layers in visio drawing list is unavailable if that layer is included in the layers in pdf list. when you select that layer in the layers in pdf list, a bullet appears next to the layer ' s name in the layers in visio drawing list. optionally, do any of the following : to reorder the layers in the layers in pdf list, drag an item up or down in the list. to include a visibility property that can be switched on or off in acrobat, deselect locked on adjacent to the pdf layer ; to lock the resulting pdf layer ' s visibility on, select locked on. to save the current settings of visio layers selected, click save pdf settings, and click ok. these settings are used the next time you convert the current visio file to a pdf file. click convert to pdf, specify a folder in the save in box in which to save the pdf file, type a filename, and then click save. note : visio layers that were selected for conversion and that have visio settings for visible, printable, or lock are converted to pdf layers ; the visible and printable properties are included in the resulting pdf layers. if the visio file contains a background page, header, or footer, the pdf file automatically has pdf layers named",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Select Visio layers to convert (Acrobat Pro)",
+      "page_start": 1,
+      "page_end": 2,
+      "chunk_index": 62,
+      "token_count": 500,
+      "entities": [
+        "select visio"
+      ],
+      "keywords": [
+        "layer",
+        "visio",
+        "list",
+        "file",
+        "drawing",
+        "setting",
+        "acrobat",
+        "folder",
+        "button",
+        "option"
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "text": "save. note : visio layers that were selected for conversion and that have visio settings for visible, printable, or lock are converted to pdf layers ; the visible and printable properties are included in the resulting pdf layers. if the visio file contains a background page, header, or footer, the pdf file automatically has pdf layers named for those items.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Select Visio layers to convert (Acrobat Pro)",
+      "page_start": 1,
+      "page_end": 2,
+      "chunk_index": 63,
+      "token_count": 74,
+      "entities": [],
+      "keywords": [
+        "layer",
+        "visio",
+        "file",
+        "conversion",
+        "setting",
+        "lock",
+        "property",
+        "background",
+        "header",
+        "footer"
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "text": "convert autocad files to pdf ( acrobat pro for windows ) use pdfmaker to convert autocad files from within the autocad application. you can also use the batch conversion feature to convert many autocad files in one operation. acrobat pdfmaker preserves selected layers and layouts when converting autocad files to pdf.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Convert AutoCAD files to PDF (Acrobat Pro for Windows)",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 64,
+      "token_count": 71,
+      "entities": [],
+      "keywords": [
+        "file",
+        "acrobat",
+        "pdfmaker",
+        "convert",
+        "window",
+        "autocad",
+        "application",
+        "batch",
+        "conversion",
+        "feature"
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "text": "convert autocad files when autocad is installed when converting individual autocad files, you don ' t usually need to change page size and plotting settings. pdfmaker uses the appropriate layout page size and plotting information to create a correctly sized pdf file.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Convert AutoCAD files when AutoCAD is installed",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 65,
+      "token_count": 52,
+      "entities": [
+        "don"
+      ],
+      "keywords": [
+        "file",
+        "size",
+        "convert",
+        "autocad",
+        "plotting",
+        "setting",
+        "pdfmaker",
+        "information"
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "text": "note : acrobat can ' t convert dwg to pdf without autocad installed. to change the pdf conversion settings, choose adobe pdf > change conversion settings in autocad. do one of the following : click a button in the adobe pdf toolbar : convert to adobe pdf or convert to adobe pdfand send for review. choose adobe pdf > convert to adobe pdf. choose adobe pdf > convert to adobe pdf and email. choose adobe pdf > convert to adobe pdfand send for review. in the choose layouts dialog box, add or remove layouts as needed. to reorder the layouts, select a layout from the layouts in pdf list, and click move up or move down. to determine how the autocad layers are converted, select one of the following, and then click continue : flatten all layers. when layers are flattened, only those entities belonging to layers that are not frozen and are printable appear in the converted pdf. retain all or some layers. in the next dialog box, specify the layers to include in the resulting pdf. specify a filename and location in the save as dialog box, and click save.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Note:",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 66,
+      "token_count": 238,
+      "entities": [],
+      "keywords": [
+        "adobe",
+        "layer",
+        "layout",
+        "convert",
+        "dialog",
+        "autocad",
+        "conversion",
+        "setting",
+        "following",
+        "pdfand"
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "text": "select autocad layers to convert if you choose to retain all or some autocad layers when converting to pdf, you can specify which layers are preserved in the pdf. in autocad, start to convert an autocad file and select the retain all or some layers option. to show specific autocad layers in the layers in drawing list, do any of the following : choose an option from the named layer filters menu to list all layers that fit that criterion. select the invert option to list all layers except those layers that are described by the selected choice in the named layer filters menu. to change the sort order of the layers, click the headings. note : to change the on, frozen, or plot properties for a layer, click cancel, change the properties in the autocad drawing, and restart the procedure. to select the autocad layers to convert, do any of the following : choose a previously saved set of layers from the pdf layer settings menu. select one or more layers from the layers in drawing list. to convert all of the layers in the drawing, click add all layers, and go to step 5. to add the selected autocad layers to the layers in pdf list, do one of the following : to convert the selected autocad layers to individual layers within a pdf layer set, click create layer set. this action creates a folder of layers in the layers navigation pane in acrobat. to convert the selected autocad layers to individual layers, click add layer ( s ). optionally, do any of the following in the layers in pdf list : to reorder layers, drag an item up or down in the list. to include a visibility property that can be switched on or off in acrobat, deselect locked on for the pdf layer. to lock the resulting pdf layer ' s visibility on, select locked on. to save the current list of selected autocad layers, click add pdf setting. later, you can retrieve this list from the pdf layer settings menu. click convert, specify a filename and location, and then click save.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Select AutoCAD layers to convert",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 67,
+      "token_count": 432,
+      "entities": [
+        "click convert"
+      ],
+      "keywords": [
+        "layer",
+        "autocad",
+        "list",
+        "drawing",
+        "option",
+        "property",
+        "following",
+        "setting",
+        "filter",
+        "acrobat"
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "text": "convert autocad files in batches choose adobe pdf > batch conversion. specify your preferences for layers, page size, plot style, and output pdfs. click conversion settings to specify the acrobat pdfmaker settings. in the dwg list, do any of the following : click add folder or add files, and then specify the folder or files. to load a previously saved list of files, click append list, and then specify the list. as needed, expand individual files and select or deselect the items you want, such as model space and layouts. to exclude or include all model space, click the associated buttons. to exclude a file from the conversion, deselect the file box. as needed, select or deselect all of the files in the list, change the order of the files, remove files, or clear the list. to show the complete file paths, select expand file name ( s ). to save the dwg list for later use, click save list. this action saves the list in its current state, including the file order and file selections. you can retrieve this list at any time by clicking append list. click convert. once the conversion has finished, you can click save details to save a log file of the conversion.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Convert AutoCAD files in batches",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 68,
+      "token_count": 260,
+      "entities": [
+        "click convert"
+      ],
+      "keywords": [
+        "file",
+        "list",
+        "conversion",
+        "convert",
+        "batch",
+        "setting",
+        "folder",
+        "append",
+        "model",
+        "space"
+      ]
+    }
+  },
+  {
+    "id": 69,
+    "text": "create bookmarks converts certain elements in original office documents to pdf bookmarks : word headings, excel worksheet names, or powerpoint titles. selecting this option overrides any settings on the bookmarks tab of the conversion settings dialog box.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Create Bookmarks",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 69,
+      "token_count": 51,
+      "entities": [],
+      "keywords": [
+        "bookmark",
+        "setting",
+        "convert",
+        "element",
+        "office",
+        "document",
+        "word",
+        "heading",
+        "excel",
+        "worksheet"
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "text": "compatibility sets the compatibility level of the pdf. use the most recent version ( in this case, version 1. 7 adbe - 3 ) to include all the latest features and functionality. if you ' re creating pdfs that are distributed widely, choose an earlier level to ensure that all users can view and print the document.",
+    "metadata": {
+      "document": "Learn Acrobat - Create and Convert_2.pdf",
+      "source": "",
+      "section_title": "Compatibility",
+      "page_start": 7,
+      "page_end": 7,
+      "chunk_index": 70,
+      "token_count": 65,
+      "entities": [],
+      "keywords": [
+        "compatibility",
+        "level",
+        "version",
+        "case",
+        "adbe",
+        "feature",
+        "functionality",
+        "pdfs",
+        "user",
+        "document"
+      ]
+    }
+  },
+  {
+    "id": 71,
+    "text": "edit text in a pdf open the pdf you want to edit in acrobat, and then select edit in the global bar. the pdf switches to the edit mode, and the edit panel displays. if the pdf is generated from a scanned document, acrobat automatically runs ocr to make the text and images editable. the edit panel includes options to modify the page, add content, redact a pdf, and convert various documents to pdf forms. you can use the options in the edit panel to replace, edit, or add text to a pdf. you can correct typos, change fonts and typeface size, adjust alignment, add superscripts or subscripts, and resize text or paragraphs.",
+    "metadata": {
+      "document": "Learn Acrobat - Edit_1.pdf",
+      "source": "",
+      "section_title": "Edit text in a PDF",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 71,
+      "token_count": 148,
+      "entities": [],
+      "keywords": [
+        "edit",
+        "text",
+        "panel",
+        "acrobat",
+        "document",
+        "option",
+        "mode",
+        "display",
+        "image",
+        "content"
+      ]
+    }
+  },
+  {
+    "id": 72,
+    "text": "set the default font for adding and editing text when you add text in a pdf, by default acrobat chooses nearby font attributes for the new text. when you edit text, any font that isn ' t available on the system is substituted by a default fall - back font for the particular script. for example, minion pro is the default fall - back font for roman script fonts. the substitution of unavailable fonts by default fonts can introduce inconsistency in the look and feel of text in a pdf document. to avoid inconsistency, choose a specific font for any text that is added or modified in the pdf document from font options under content editing. from the hamburger menu ( windows ) or the acrobat menu ( macos ), choose preferences. the preferences dialog box is displayed. ( alternatively, you can press ctrl + k keys on windows® or command + k keys on macos. ) in the dialog box, select content editing under categories to display font options. select an appropriate font in the drop - down lists : fallback font for editing. default font for add text and font size. select ok to save the changes and close the preferences dialog box.",
+    "metadata": {
+      "document": "Learn Acrobat - Edit_1.pdf",
+      "source": "",
+      "section_title": "Set the default font for adding and editing text",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 72,
+      "token_count": 246,
+      "entities": [
+        "macos"
+      ],
+      "keywords": [
+        "font",
+        "text",
+        "default",
+        "preference",
+        "dialog",
+        "acrobat",
+        "fall",
+        "script",
+        "inconsistency",
+        "document"
+      ]
+    }
+  },
+  {
+    "id": 73,
+    "text": "change, replace, or delete text when you edit text, the text in the paragraph reflows within its text box to accommodate the changes. each text box is independent, and inserting text in one text block doesn ' t push down an adjacent text box or reflow to the next page. select edit in the global bar. select the text that you want to edit. the text - box turns blue upon selection, and a rotation handle appears at the top of the selected text - box. edit the text by doing one of the following : type new text to replace the selected text, or press delete to remove it. to rotate the text box, use the rotation handle at the top of the selected text box. manage list items using the list controls ( bulleted and numbered ) in the left format panel. you can create lists and, conversely, convert a list item to a paragraph or change list types. select a font, font size, or other formatting options in the left format panel. you can also try the advanced format options, such as line spacing, character spacing, horizontal scaling, stroke width, and color. select any area outside the selection to deselect it, and start over.",
+    "metadata": {
+      "document": "Learn Acrobat - Edit_1.pdf",
+      "source": "",
+      "section_title": "Change, replace, or delete text",
+      "page_start": 4,
+      "page_end": 5,
+      "chunk_index": 73,
+      "token_count": 248,
+      "entities": [
+        "doesn"
+      ],
+      "keywords": [
+        "text",
+        "list",
+        "change",
+        "format",
+        "reflow",
+        "selection",
+        "rotation",
+        "handle",
+        "item",
+        "panel"
+      ]
+    }
+  },
+  {
+    "id": 74,
+    "text": "format text select edit in the global bar. select the text that you want to change. in the format text section on the left panel, select a font, font size, bold, or other formatting options. you can also try the advanced format options, such as line spacing, character spacing, horizontal scaling, stroke width, and color. do any of the following : move : place the pointer over the line of the bounding box ( avoid the selection handles ). when the cursor changes to move pointer, drag the box to the desired location. hold down the shift key as you drag to constrain the movement vertically or horizontally. rotate : click and hold the rotation pointer, drag in the direction you want it to rotate. resize : place the pointer over any of the circular selection handles, and drag",
+    "metadata": {
+      "document": "Learn Acrobat - Edit_1.pdf",
+      "source": "",
+      "section_title": "Format text",
+      "page_start": 5,
+      "page_end": 8,
+      "chunk_index": 74,
+      "token_count": 168,
+      "entities": [
+        "cursor"
+      ],
+      "keywords": [
+        "pointer",
+        "format",
+        "text",
+        "option",
+        "line",
+        "selection",
+        "handle",
+        "edit",
+        "panel",
+        "size"
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "text": "add or edit lists you can add items to a numbered or bulleted list, create list items, convert a paragraph to a list item, and conversely. you can also change list types. select edit in the global bar. then, from the edit panel, select text under add content. to add or remove items from a numbered or bulleted list : note : you can add or remove items to the list at all nested levels using the same familiar controls that you use in microsoft® office. for example, press enter at the end of a list item to insert a new row. press backspace to remove the new row and position the cursor back to the end of the previous list item. to create a numbered or bulleted list : place the cursor in the document at the location where you want to add a list. choose the appropriate list type under format text. to convert an existing paragraph to a list item : place the cursor in the paragraph, and then choose the appropriate list type under format text. to convert an existing list item to a paragraph : select all items in the list. the appropriate list type is highlighted under format text. click the highlighted list type. to convert from one list type to another : place the cursor in the list item or select all items. choose the appropriate list type under format text.",
+    "metadata": {
+      "document": "Learn Acrobat - Edit_1.pdf",
+      "source": "",
+      "section_title": "Add or edit lists",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 75,
+      "token_count": 274,
+      "entities": [
+        "cursor"
+      ],
+      "keywords": [
+        "list",
+        "item",
+        "type",
+        "text",
+        "paragraph",
+        "cursor",
+        "format",
+        "edit",
+        "press",
+        "panel"
+      ]
+    }
+  },
+  {
+    "id": 76,
+    "text": "comprehensive guide to major cities in the south of france introduction the south of france, known for its stunning landscapes, mediterranean coastline, and rich cultural heritage, is home to some of the most beautiful and historically significant cities in the country. this guide provides an in - depth look at the major cities in the south of france, detailing their history, key attractions, cultural highlights, and unique characteristics. whether you ' re planning a visit or simply want to learn more about this enchanting region, this guide will offer valuable insights into each city ' s charm and allure.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Comprehensive Guide to Major Cities in the South of France Introduction",
+      "page_start": 1,
+      "page_end": 1,
+      "chunk_index": 76,
+      "token_count": 114,
+      "entities": [
+        "france",
+        "mediterranean"
+      ],
+      "keywords": [
+        "city",
+        "guide",
+        "south",
+        "france",
+        "introduction",
+        "landscape",
+        "mediterranean",
+        "coastline",
+        "heritage",
+        "home"
+      ]
+    }
+  },
+  {
+    "id": 77,
+    "text": "overview of the region the south of france, or \" le midi, \" encompasses the regions of provence - alpes - cote d ' azur, occitanie, and parts of nouvelle - aquitaine. this area is renowned for its diverse landscapes, from the sun - drenched beaches of the french riviera to the rolling vineyards of provence and the rugged pyrenees mountains. the mediterranean climate ensures warm summers and mild winters, making it a year - round destination. the south of france is also famous for its cuisine, wines, and vibrant cultural scene.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Overview of the Region",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 77,
+      "token_count": 111,
+      "entities": [
+        "france",
+        "occitanie",
+        "mediterranean"
+      ],
+      "keywords": [
+        "region",
+        "south",
+        "france",
+        "provence",
+        "overview",
+        "midi",
+        "alpes",
+        "cote",
+        "azur",
+        "occitanie"
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "text": "travel tips best time to visit : the best time to visit the south of france is during the spring ( april to june ) and fall ( september to october ) when the weather is pleasant, and the tourist crowds are smaller. transportation : the region is well - connected by an extensive network of trains, buses, and flights. renting a car is also a great option for exploring the countryside and smaller towns. language : while french is the official language, english is widely spoken in tourist areas. learning a few basic french phrases can enhance your travel experience.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Travel Tips",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 78,
+      "token_count": 111,
+      "entities": [
+        "france"
+      ],
+      "keywords": [
+        "travel",
+        "time",
+        "tourist",
+        "language",
+        "tip",
+        "south",
+        "france",
+        "spring",
+        "april",
+        "june"
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "text": "marseille : the oldest city in france history marseille, founded by greek sailors around 600 bc, is the oldest city in france. its strategic location on the mediterranean coast made it a vital trading port throughout history. the city ' s rich cultural heritage is reflected in its diverse architecture and vibrant atmosphere. over the centuries, marseille has been influenced by various cultures, including greek, roman, and north african, making it a melting pot of traditions and customs. key attractions old port ( vieux - port ) : the heart of marseille, the old port has been a bustling harbor for over 2, 600 years. today, it is a lively area filled with cafes, restaurants, and markets. basilica of notre - dame de la garde : this iconic basilica, perched on a hill overlooking the city, offers panoramic views of marseille and the mediterranean sea. built in the 19th century, it is a symbol of the city ' s maritime heritage. mucem ( museum of european and mediterranean civilizations ) : this modern museum explores the cultural history of the mediterranean region through a variety of exhibits and interactive displays. le panier : the oldest district in marseille, le panier is a maze of narrow streets, colorful buildings, and historic landmarks. it ' s a great place to explore the city ' s past and enjoy its vibrant culture. local experiences boat trip to the calanques : take a boat trip to the calanques, a series of stunning limestone cliffs and coves along the coast. fish market at the old port : visit the fish market at the old port to experience the local seafood culture. street art in cours julien : explore the vibrant street art scene in the cours julien district. cultural highlights marseille is known for its vibrant arts scene, with numerous galleries, theaters, and music venues. the city hosts several festivals throughout the year, including the festival de marseille, which celebrates contemporary dance, theater, and music. marseille ' s cuisine is also a highlight, with dishes like bouillabaisse ( a traditional fish stew ) and pastis ( an aniseflavored aperitif ) being local favorites.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Marseille: The Oldest City in France",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 79,
+      "token_count": 428,
+      "entities": [
+        "marseille",
+        "france",
+        "the mediterranean coast",
+        "basilica",
+        "notre - dame de la garde",
+        "the mediterranean sea",
+        "mucem",
+        "mediterranean",
+        "highlights marseille"
+      ],
+      "keywords": [
+        "marseille",
+        "city",
+        "port",
+        "history",
+        "culture",
+        "market",
+        "street",
+        "fish",
+        "france",
+        "mediterranean"
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "text": "nice : the jewel of the french riviera history nice, located on the french riviera, has been a popular destination for centuries. its history dates back to the ancient greeks, who founded the city around 350 bc. nice later became a roman colony and has since evolved into a glamorous resort town. in the 19th century, nice became a favorite winter retreat for european aristocrats, which contributed to its development as a luxurious destination.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Nice: The Jewel of the French Riviera",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 80,
+      "token_count": 91,
+      "entities": [],
+      "keywords": [
+        "riviera",
+        "history",
+        "destination",
+        "century",
+        "jewel",
+        "greek",
+        "city",
+        "colony",
+        "resort",
+        "town"
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "text": "key attractions promenade des anglais : this famous seaside promenade, built in the 19th century, is perfect for a leisurely stroll along the coast. it offers stunning views of the mediterranean and is lined with cafes and hotels. castle hill ( colline du chateau ) : this hilltop park offers panoramic views of nice and the mediterranean. it was once the site of a medieval castle, which was destroyed in the 18th century. old town ( vieux nice ) : the historic center of nice is a labyrinth of narrow streets, baroque churches, and bustling markets. don ' t miss the cours saleya market, where you can find fresh produce, flowers, and local delicacies. matisse museum : dedicated to the works of henri matisse, who spent much of his life in nice, this museum features a comprehensive collection of his paintings, sculptures, and drawings.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Key Attractions",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 81,
+      "token_count": 176,
+      "entities": [
+        "mediterranean",
+        "castle hill",
+        "don",
+        "matisse"
+      ],
+      "keywords": [
+        "promenade",
+        "century",
+        "view",
+        "mediterranean",
+        "castle",
+        "market",
+        "matisse",
+        "museum",
+        "attraction",
+        "anglais"
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "text": "hidden gems russian orthodox cathedral : visit the stunning russian orthodox cathedral, a unique architectural gem in nice. marc chagall national museum : explore the works of marc chagall at this dedicated museum. parc phoenix : discover the botanical wonders at parc phoenix, a beautiful garden and park. cultural highlights nice is renowned for its vibrant cultural scene, with numerous museums, galleries, and theaters. the city hosts the nice carnival in february, one of the largest and oldest carnivals in the world. the nice jazz festival, held in july, is another major event that attracts music lovers from around the globe. nice ' s cuisine is also a highlight, with dishes like salade nicoise and socca ( a chickpea flour pancake ) being local specialties.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Hidden Gems",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 82,
+      "token_count": 151,
+      "entities": [
+        "parc phoenix"
+      ],
+      "keywords": [
+        "museum",
+        "cathedral",
+        "marc",
+        "parc",
+        "phoenix",
+        "highlight",
+        "carnival",
+        "gem",
+        "national",
+        "work"
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "text": "toulouse : the pink city history toulouse, known as \" la ville rose \" ( the pink city ) due to its distinctive terracotta buildings, is a vibrant city with a rich history. it was an important center during the roman period and later became a hub of the aerospace industry. toulouse has been a center of learning and culture for centuries, with a prestigious university and numerous research institutions. key attractions basilica of saint - sernin : this romanesque basilica, built between the 11th and 13th centuries, is a unesco world heritage site. it is one of the largest and best - preserved romanesque churches in europe. capitole de toulouse : the city ' s town hall and theater, the capitole, is an impressive building with a neoclassical facade. it has been the seat of municipal power since the 12th century. jacobins convent : this gothic convent, founded in the 13th century, is known for its beautiful cloister and the relics of saint thomas aquinas. cite de l ' espace : this space - themed science museum features interactive exhibits, a planetarium, and a replica of the mir space station. it ' s an engaging and educational experience for visitors of all ages. aerospace industry airbus factory tours : visit the airbus factory for a fascinating tour of one of the world ' s leading aircraft manufacturers. aeroscopia museum : explore the history of aviation at the aeroscopia museum, which features a collection of historic aircraft. cultural highlights toulouse is renowned for its vibrant cultural scene, with numerous theaters, music venues, and festivals. the city hosts the toulouse international art festival, which features contemporary art exhibitions and performances. toulouse ' s cuisine is also notable, with local specialties such as cassoulet ( a hearty bean and meat stew ) and foie gras being popular dishes.",
+    "metadata": {
+      "document": "South of France - Cities.pdf",
+      "source": "",
+      "section_title": "Toulouse: The Pink City",
+      "page_start": 9,
+      "page_end": 9,
+      "chunk_index": 83,
+      "token_count": 361,
+      "entities": [
+        "europe",
+        "capitole de toulouse",
+        "saint thomas aquinas.",
+        "de l '",
+        "airbus",
+        "aeroscopia museum",
+        "the aeroscopia museum",
+        "foie gras"
+      ],
+      "keywords": [
+        "toulouse",
+        "city",
+        "century",
+        "history",
+        "museum",
+        "building",
+        "center",
+        "aerospace",
+        "industry",
+        "basilica"
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "text": "a culinary journey through the south of france introduction the south of france, known for its stunning landscapes and charming villages, is also a paradise for food lovers. the region ' s cuisine is a delightful blend of mediterranean flavors, fresh ingredients, and traditional recipes passed down through generations. this guide will take you through the different types of food, famous dishes, must - visit restaurants, renowned wine regions, and the types of wines they produce to help you plan an unforgettable culinary adventure.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "A Culinary Journey Through the South of France Introduction",
+      "page_start": 1,
+      "page_end": 1,
+      "chunk_index": 84,
+      "token_count": 98,
+      "entities": [
+        "france",
+        "mediterranean"
+      ],
+      "keywords": [
+        "south",
+        "france",
+        "food",
+        "region",
+        "type",
+        "wine",
+        "journey",
+        "introduction",
+        "landscape",
+        "village"
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "text": "types of food the cuisine in the south of france is diverse, reflecting the region ' s rich history and cultural influences. here are some key types of food you can expect to find : seafood : with its extensive coastline, the south of france offers an abundance of fresh seafood. look for dishes featuring fish, shellfish, and crustaceans, often prepared with mediterranean herbs and olive oil. popular seafood dishes include grilled sardines, sea bass, and mussels mariniere. the region ' s proximity to the mediterranean sea ensures that the seafood is always fresh and flavorful. provencal cuisine : this style of cooking emphasizes fresh vegetables, herbs, and olive oil. ratatouille, a vegetable stew, and bouillabaisse, a fish soup, are quintessential provencal dishes. provencal cuisine also includes dishes like tapenade, a spread made from olives, capers, and anchovies, and pissaladiere, a savory tart topped with caramelized onions, olives, and anchovies. nicoise cuisine : originating from nice, this cuisine includes dishes like salade nicoise, a salad with tuna, olives, and anchovies, and socca, a chickpea flour pancake. other nicoise specialties include pan bagnat, a sandwich made with tuna, vegetables, and olive oil, and daube, a slow - cooked beef stew with red wine and vegetables. occitan cuisine : this cuisine features hearty dishes like cassoulet, a slow - cooked casserole with beans, sausage, and duck, and aligot, a cheesy mashed potato dish. occitan cuisine also includes dishes like garbure, a thick soup made with cabbage, beans, and confit de canard ( duck confit ), and brandade de morue, a creamy salt cod spread. basque cuisine : influenced by neighboring spain, basque cuisine includes dishes like piperade, a pepper and tomato stew, and axoa, a veal stew with peppers. basque cuisine is also known for its pintxos, small snacks typically served in bars, and gateau basque, a traditional basque cake filled with pastry cream or cherry jam.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Types of Food",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 85,
+      "token_count": 462,
+      "entities": [
+        "france",
+        "the mediterranean sea",
+        "pan bagnat",
+        "occitan cuisine",
+        "basque cuisine",
+        "spain"
+      ],
+      "keywords": [
+        "cuisine",
+        "dish",
+        "seafood",
+        "stew",
+        "vegetable",
+        "olive",
+        "anchovy",
+        "nicoise",
+        "type",
+        "food"
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "text": "famous dishes the south of france is home to many iconic dishes that you must try during your visit : bouillabaisse : a traditional fish stew from marseille, made with various types of fish, shellfish, and a flavorful broth seasoned with saffron and herbs. bouillabaisse is typically served with rouille, a garlicky mayonnaise, and crusty bread. the dish is a celebration of the sea and is best enjoyed in a seaside restaurant with a view of the mediterranean. ratatouille : a vegetable stew made with eggplant, zucchini, bell peppers, tomatoes, and onions, seasoned with herbs de provence. ratatouille can be served as a main dish or as a side, and it pairs beautifully with grilled meats or fish. the dish is a testament to the region ' s love for fresh, seasonal produce. salade nicoise : a refreshing salad with tuna, hard - boiled eggs, tomatoes, green beans, olives, and anchovies, dressed with olive oil and vinegar. salade nicoise is a perfect example of the mediterranean diet, which emphasizes fresh vegetables, lean proteins, and healthy fats. it ' s a light yet satisfying dish that is perfect for a warm summer day. socca : a thin, crispy pancake made from chickpea flour, olive oil, and water, typically enjoyed as a street food in nice. socca is cooked in a wood - fired oven and is best eaten hot, straight from the oven. it ' s a simple yet delicious snack that showcases the region ' s love for humble, rustic dishes. cassoulet : a hearty casserole from the languedoc region, made with white beans, sausage, and duck or pork. cassoulet is a labor of love, requiring hours of slow cooking to develop its rich, complex flavors. the dish is a comforting and satisfying meal that is perfect for a chilly evening. tarte tropezienne : a dessert from saint - tropez, consisting of a brioche filled with a creamy mixture of pastry cream and butter. tarte tropezienne is a sweet treat that is perfect for a special occasion or as an indulgent afternoon snack. the dessert was created by a polish baker in the 1950s and quickly became a favorite among locals and tourists alike.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Famous Dishes",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 86,
+      "token_count": 484,
+      "entities": [
+        "france",
+        "marseille",
+        "bouillabaisse",
+        "mediterranean",
+        "bell",
+        "ratatouille"
+      ],
+      "keywords": [
+        "dish",
+        "fish",
+        "region",
+        "love",
+        "bouillabaisse",
+        "stew",
+        "herb",
+        "mediterranean",
+        "ratatouille",
+        "vegetable"
+      ]
+    }
+  },
+  {
+    "id": 87,
+    "text": "of pastry cream and butter. tarte tropezienne is a sweet treat that is perfect for a special occasion or as an indulgent afternoon snack. the dessert was created by a polish baker in the 1950s and quickly became a favorite among locals and tourists alike.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Famous Dishes",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 87,
+      "token_count": 54,
+      "entities": [],
+      "keywords": [
+        "pastry",
+        "cream",
+        "butter",
+        "tarte",
+        "tropezienne",
+        "treat",
+        "occasion",
+        "afternoon",
+        "snack",
+        "dessert"
+      ]
+    }
+  },
+  {
+    "id": 88,
+    "text": "must - visit restaurants to truly experience the culinary delights of the south of france, here are some restaurants you should consider visiting : le petit nice passedat ( marseille ) : a three - michelin - starred restaurant offering exquisite seafood dishes and stunning views of the mediterranean. chef gerald passedat is known for his innovative approach to seafood, creating dishes that are both visually stunning and incredibly flavorful. the restaurant ' s location on the cliffs overlooking the sea adds to the overall dining experience. la chevre d ' or ( eze ) : located in a medieval village, this two - michelin - starred restaurant serves refined provencal cuisine with breathtaking views of the french riviera. the restaurant ' s terrace offers panoramic views of the mediterranean, making it the perfect spot for a romantic dinner. the menu features dishes that highlight the region ' s fresh, seasonal ingredients. le mirazur ( menton ) : ranked among the world ' s best restaurants, le mirazur offers a unique dining experience with a focus on fresh, local ingredients and innovative dishes. chef mauro colagreco ' s cuisine is inspired by the surrounding landscape, with many ingredients sourced from the restaurant ' s own gardens. the menu changes with the seasons, ensuring that each visit is a new and exciting experience. chez pipo ( nice ) : a local favorite for socca, this casual eatery is perfect for a quick and delicious snack. chez pipo has been serving socca since 1923 and is a beloved institution in nice. the restaurant ' s simple, no - frills approach allows the quality of the socca to shine through. l ' atelier de jean - luc rabanel ( arles ) : a michelin - starred restaurant known for its creative and contemporary take on provencal cuisine. chef jean - luc rabanel ' s dishes are a feast for the senses, combining bold flavors with artistic presentation. the restaurant ' s tasting menu offers a journey through the flavors of provence, with each course showcasing the region ' s finest ingredients. la table de plaisance ( saint - emilion ) : a two - michelin - starred restaurant offering a sophisticated menu that highlights the flavors of the region. the restaurant is located in a historic building in the heart of saint - emilion, a town known for its world - class wines. the menu features dishes that pair beautifully with the local wines, creating a truly memorable dining experience.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Must-Visit Restaurants",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 88,
+      "token_count": 495,
+      "entities": [
+        "france",
+        "mediterranean",
+        "chef gerald passedat",
+        "la chevre",
+        "mirazur",
+        "mauro colagreco ' s cuisine",
+        "chez",
+        "michelin",
+        "jean - luc"
+      ],
+      "keywords": [
+        "restaurant",
+        "dish",
+        "menu",
+        "michelin",
+        "experience",
+        "ingredient",
+        "view",
+        "chef",
+        "dining",
+        "cuisine"
+      ]
+    }
+  },
+  {
+    "id": 89,
+    "text": "two - michelin - starred restaurant offering a sophisticated menu that highlights the flavors of the region. the restaurant is located in a historic building in the heart of saint - emilion, a town known for its world - class wines. the menu features dishes that pair beautifully with the local wines, creating a truly memorable dining experience.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Must-Visit Restaurants",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 89,
+      "token_count": 65,
+      "entities": [],
+      "keywords": [
+        "restaurant",
+        "menu",
+        "wine",
+        "michelin",
+        "flavor",
+        "region",
+        "building",
+        "heart",
+        "saint",
+        "emilion"
+      ]
+    }
+  },
+  {
+    "id": 90,
+    "text": "wine regions and types of wines the south of france is renowned for its diverse and exceptional wine regions. here are some key areas to explore and the types of wines they produce : provence : famous for its rose wines, provence is one of the oldest wine - producing regions in france. the region ' s sunny climate and diverse terroir contribute to the production of light, refreshing roses, as well as robust reds and aromatic whites. key appellations include cotes de provence, bandol, and cassis. notable grape varieties include grenache, syrah, mourvedre, and cinsault for reds and roses, and rolle ( vermentino ) and clairette for whites. languedoc - roussillon : this vast region stretches along the mediterranean coast and is known for its variety of wine styles. languedoc - roussillon produces everything from crisp whites and fruity roses to full - bodied reds. notable appellations include corbieres, minervois, and picpoul de pinet. key grape varieties include carignan, grenache, syrah, and mourvedre for reds, and picpoul, marsanne, and roussanne for whites. rhone valley : the southern part of the rhone valley is famous for its powerful red wines, particularly those from chateauneuf - du - pape. the region also produces excellent whites and roses. other important appellations include gigondas, vacqueyras, and cotes du rhone. key grape varieties include grenache, syrah, and mourvedre for reds, and viognier, marsanne, and roussanne for whites. south west france ( sud - ouest ) : this lesser - known region is home to a variety of unique wines made from indigenous grape varieties. the area includes sub - regions such as bergerac, cahors, and madiran. south west france is known for its robust reds, aromatic whites, and sweet dessert wines. key grape varieties include malbec ( known locally as cot ), tannat, and negrette for reds, and gros manseng, petit manseng, and colombard for whites. corsica : although technically an island, corsica is often included in discussions of southern french wine regions. the island ' s diverse terroir and mediterranean climate produce a range of wines, including crisp whites, fruity roses,",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Wine Regions and Types of Wines",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 90,
+      "token_count": 500,
+      "entities": [
+        "france",
+        "notable grape",
+        "syrah",
+        "rolle",
+        "the mediterranean coast",
+        "key grape",
+        "picpoul",
+        "south west france",
+        "madiran",
+        "gros manseng",
+        "petit manseng"
+      ],
+      "keywords": [
+        "wine",
+        "region",
+        "white",
+        "red",
+        "variety",
+        "rose",
+        "grape",
+        "france",
+        "south",
+        "provence"
+      ]
+    }
+  },
+  {
+    "id": 91,
+    "text": "##nat, and negrette for reds, and gros manseng, petit manseng, and colombard for whites. corsica : although technically an island, corsica is often included in discussions of southern french wine regions. the island ' s diverse terroir and mediterranean climate produce a range of wines, including crisp whites, fruity roses, and spicy reds. key appellations include ajaccio, patrimonio, and vin de corse. notable grape varieties include nielluccio ( sangiovese ), sciacarello, and vermentino.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Wine Regions and Types of Wines",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 91,
+      "token_count": 120,
+      "entities": [
+        "gros manseng",
+        "petit manseng",
+        "vin de"
+      ],
+      "keywords": [
+        "red",
+        "manseng",
+        "white",
+        "corsica",
+        "island",
+        "wine",
+        "negrette",
+        "gro",
+        "petit",
+        "discussion"
+      ]
+    }
+  },
+  {
+    "id": 92,
+    "text": "culinary experiences in addition to dining at top restaurants, there are several culinary experiences you should consider : cooking classes : many towns and cities in the south of france offer cooking classes where you can learn to prepare traditional dishes like bouillabaisse, ratatouille, and tarte tropezienne. these classes are a great way to immerse yourself in the local culture and gain hands - on experience with regional recipes. some classes even include a visit to a local market to shop for fresh ingredients. food markets : visit local markets such as the cours saleya market in nice or the marche forville in cannes to sample fresh produce, cheeses, and charcuterie. these markets are a feast for the senses, with stalls overflowing with colorful fruits and vegetables, fragrant herbs, and artisanal products. take the time to chat with the vendors and learn about the local specialties. wine tours : the south of france is renowned for its wine regions, including provence and languedoc. take a wine tour to visit vineyards, taste local wines, and learn about the winemaking process. many wineries offer guided tours and tastings, giving you the opportunity to sample a variety of wines and discover new favorites. don ' t miss the chance to try rose from provence, which is famous for its light, refreshing flavor. olive oil tasting : the region is famous for its olive oil. visit an olive grove to learn about olive oil production and enjoy a tasting session. you ' ll have the chance to sample different varieties of olive oil and learn about the nuances of flavor and aroma. many olive groves also produce other products like tapenade and olive soap, which make great souvenirs. truffle hunting : the south of france is known for its truffles, particularly the black truffles from the perigord region. join a truffle hunting tour to experience the thrill of searching for these prized fungi. you ' ll be accompanied by a trained truffle dog and a knowledgeable guide who will teach you about the truffle ' s history and culinary uses. after the hunt, enjoy a truffle - themed meal featuring your freshly harvested finds. farm - to - table dining : many restaurants in the south of france embrace the farm - totable philosophy, sourcing their ingredients from local farms and producers. look for restaurants that highlight seasonal, locally grown produce and sustainably raised meats. dining at a",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Culinary Experiences",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 92,
+      "token_count": 500,
+      "entities": [
+        "france",
+        "marche",
+        "don"
+      ],
+      "keywords": [
+        "market",
+        "wine",
+        "class",
+        "south",
+        "france",
+        "truffle",
+        "experience",
+        "dining",
+        "restaurant",
+        "region"
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "text": "after the hunt, enjoy a truffle - themed meal featuring your freshly harvested finds. farm - to - table dining : many restaurants in the south of france embrace the farm - totable philosophy, sourcing their ingredients from local farms and producers. look for restaurants that highlight seasonal, locally grown produce and sustainably raised meats. dining at a farm - to - table restaurant is a wonderful way to support local agriculture and enjoy the freshest ingredients available.",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Culinary Experiences",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 93,
+      "token_count": 92,
+      "entities": [
+        "france"
+      ],
+      "keywords": [
+        "farm",
+        "restaurant",
+        "table",
+        "dining",
+        "ingredient",
+        "hunt",
+        "meal",
+        "south",
+        "france",
+        "philosophy"
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "text": "conclusion the south of france offers a rich and diverse culinary landscape that is sure to delight any food lover. from fresh seafood and provencal dishes to iconic restaurants and unique culinary experiences, there is something for everyone to enjoy. whether you ' re savoring a bowl of bouillabaisse by the sea, exploring vibrant food markets, or indulging in a michelin - starred meal, the flavors of this beautiful region will leave a lasting impression. use this guide to plan your culinary journey and savor the tastes of the south of france, creating memories that will linger long after your trip has ended. bon appetit!",
+    "metadata": {
+      "document": "South of France - Cuisine.pdf",
+      "source": "",
+      "section_title": "Conclusion",
+      "page_start": 8,
+      "page_end": 8,
+      "chunk_index": 94,
+      "token_count": 128,
+      "entities": [
+        "france",
+        "michelin"
+      ],
+      "keywords": [
+        "south",
+        "france",
+        "food",
+        "landscape",
+        "lover",
+        "seafood",
+        "dish",
+        "restaurant",
+        "experience",
+        "bowl"
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "text": "a historical journey through the south of france introduction the south of france, renowned for its picturesque landscapes, charming villages, and stunning coastline, is also steeped in history. from ancient roman ruins to medieval fortresses and renaissance architecture, this region offers a fascinating glimpse into the past. this guide will take you through the histories of major cities, famous historical sites, and other points of interest to help you plan an enriching and unforgettable trip.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "A Historical Journey Through the South of France Introduction",
+      "page_start": 1,
+      "page_end": 1,
+      "chunk_index": 95,
+      "token_count": 92,
+      "entities": [
+        "france"
+      ],
+      "keywords": [
+        "south",
+        "france",
+        "history",
+        "journey",
+        "introduction",
+        "landscape",
+        "village",
+        "coastline",
+        "ruin",
+        "fortress"
+      ]
+    }
+  },
+  {
+    "id": 96,
+    "text": "marseille : the oldest city in france marseille, founded by greek sailors around 600 bc, is the oldest city in france. its strategic location on the mediterranean coast made it a vital trading port throughout history. the city ' s rich cultural heritage is reflected in its diverse architecture and vibrant atmosphere.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Marseille: The Oldest City in France",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 96,
+      "token_count": 57,
+      "entities": [
+        "marseille",
+        "france",
+        "the mediterranean coast"
+      ],
+      "keywords": [
+        "city",
+        "marseille",
+        "france",
+        "sailor",
+        "location",
+        "mediterranean",
+        "coast",
+        "trading",
+        "port",
+        "history"
+      ]
+    }
+  },
+  {
+    "id": 97,
+    "text": "key historical sites in marseille old port ( vieux - port ) : the heart of marseille, the old port has been a bustling harbor for over 2, 600 years. today, it is a lively area filled with cafes, restaurants, and markets. basilica of notre - dame de la garde : this iconic basilica, perched on a hill overlooking the city, offers panoramic views of marseille and the mediterranean sea. built in the 19th century, it is a symbol of the city ' s maritime heritage. fort saint - jean : constructed in the 17th century, this fort guards the entrance to the old port. it now houses part of the museum of european and mediterranean civilizations ( mucem ). le panier : the oldest district in marseille, le panier is a maze of narrow streets, colorful buildings, and historic landmarks. it ' s a great place to explore the city ' s past and enjoy its vibrant culture. chateau d ' if : commissioned by king francis i in 1524, this fortress on the ile d ' if became famous as a prison and was immortalized in alexandre dumas ' novel \" the count of monte cristo \" 1. la marseillaise : marseille played a significant role during the french revolution, and the city ' s volunteers composed the national anthem of france, \" la marseillaise \" 2.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Key Historical Sites in Marseille",
+      "page_start": 2,
+      "page_end": 2,
+      "chunk_index": 97,
+      "token_count": 270,
+      "entities": [
+        "marseille",
+        "basilica",
+        "notre - dame de la garde",
+        "the mediterranean sea",
+        "fort saint - jean :",
+        "the museum of european and mediterranean civilizations ( mucem",
+        "francis",
+        "the french revolution",
+        "france"
+      ],
+      "keywords": [
+        "marseille",
+        "port",
+        "city",
+        "basilica",
+        "century",
+        "fort",
+        "panier",
+        "marseillaise",
+        "site",
+        "vieux"
+      ]
+    }
+  },
+  {
+    "id": 98,
+    "text": "nice : the jewel of the french riviera nice, located on the french riviera, has been a popular destination for centuries. its history dates back to the ancient greeks, who founded the city around 350 bc. nice later became a roman colony and has since evolved into a glamorous resort town.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Nice: The Jewel of the French Riviera",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 98,
+      "token_count": 63,
+      "entities": [],
+      "keywords": [
+        "riviera",
+        "jewel",
+        "destination",
+        "century",
+        "history",
+        "greek",
+        "city",
+        "colony",
+        "resort",
+        "town"
+      ]
+    }
+  },
+  {
+    "id": 99,
+    "text": "key historical sites in nice castle hill ( colline du chateau ) : this hilltop park offers stunning views of nice and the mediterranean. it was once the site of a medieval castle, which was destroyed in the 18th century. promenade des anglais : this famous seaside promenade was built in the 19th century and named after the english aristocrats who frequented nice. it ' s perfect for a leisurely stroll along the coast. old town ( vieux nice ) : the historic center of nice is a labyrinth of narrow streets, baroque churches, and bustling markets. don ' t miss the cours saleya market, where you can find fresh produce, flowers, and local delicacies. russian orthodox cathedral : built in the early 20th century, this stunning cathedral reflects the influence of russian aristocrats who vacationed in nice. cimiez : an ancient roman settlement, cimiez is home to the ruins of a roman amphitheater and baths, as well as the monastery of cimiez, which offers beautiful gardens and a museum dedicated to the painter henri matisse3. carnival of nice : one of the most famous carnivals in france, the carnival of nice dates back to 1873 and features elaborate parades, floats, and flower battles4.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Key Historical Sites in Nice",
+      "page_start": 3,
+      "page_end": 3,
+      "chunk_index": 99,
+      "token_count": 252,
+      "entities": [
+        "mediterranean",
+        "don",
+        "henri matisse3",
+        "france"
+      ],
+      "keywords": [
+        "century",
+        "cimiez",
+        "carnival",
+        "site",
+        "nice",
+        "castle",
+        "promenade",
+        "aristocrat",
+        "market",
+        "flower"
+      ]
+    }
+  },
+  {
+    "id": 100,
+    "text": "avignon : the city of popes avignon, located on the banks of the rhone river, is best known for its role as the seat of the papacy in the 14th century. the city was home to seven popes during this period, leaving a lasting legacy of impressive architecture and cultural heritage.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Avignon: The City of Popes",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 100,
+      "token_count": 60,
+      "entities": [],
+      "keywords": [
+        "avignon",
+        "city",
+        "pope",
+        "bank",
+        "rhone",
+        "river",
+        "role",
+        "seat",
+        "papacy",
+        "century"
+      ]
+    }
+  },
+  {
+    "id": 101,
+    "text": "key historical sites in avignon palais des papes : this massive gothic palace was the residence of the popes during their stay in avignon. it is one of the largest and most important medieval gothic buildings in europe. pont saint - benezet ( pont d ' avignon ) : this famous bridge, immortalized in the song \" sur le pont d ' avignon, \" was built in the 12th century. although only a few arches remain, it is a unesco world heritage site. avignon cathedral : located next to the palais des papes, this romanesque cathedral dates back to the 12th century and features a gilded statue of the virgin mary. place de l ' horloge : the main square in avignon, this lively area is surrounded by cafes, restaurants, and historic buildings, including the 19th - century town hall and opera house. rocher des doms : this rocky outcrop offers panoramic views of the rhone river and the surrounding countryside. it has been a strategic site since prehistoric times and now features beautiful gardens5. avignon festival : established in 1947, the avignon festival is one of the most important contemporary performing arts events in the world, attracting artists and audiences from around the globe6.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Key Historical Sites in Avignon",
+      "page_start": 4,
+      "page_end": 4,
+      "chunk_index": 101,
+      "token_count": 248,
+      "entities": [
+        "europe",
+        "pont saint - benezet",
+        "place de l '",
+        "rocher des doms",
+        "gardens5",
+        "globe6"
+      ],
+      "keywords": [
+        "avignon",
+        "site",
+        "pont",
+        "century",
+        "palais",
+        "building",
+        "world",
+        "festival",
+        "pape",
+        "palace"
+      ]
+    }
+  },
+  {
+    "id": 102,
+    "text": "nimes : the rome of france nimes, often referred to as the \" rome of france, \" boasts some of the best - preserved roman architecture in the country. the city ' s history dates back to the roman empire, when it was an important settlement in the province of gallia narbonensis.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Nîmes: The Rome of France",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 102,
+      "token_count": 63,
+      "entities": [
+        "rome",
+        "france"
+      ],
+      "keywords": [
+        "nime",
+        "rome",
+        "france",
+        "architecture",
+        "country",
+        "city",
+        "history",
+        "empire",
+        "settlement",
+        "province"
+      ]
+    }
+  },
+  {
+    "id": 103,
+    "text": "key historical sites in nimes arena of nimes : this roman amphitheater, built in the 1st century ad, is one of the best - preserved in the world. it still hosts events, including concerts and bullfights. maison carree : a beautifully preserved roman temple, the maison carree dates back to the 1st century bc. it is one of the best examples of classical roman architecture. pont du gard : located just outside nimes, this ancient roman aqueduct is a unesco world heritage site. it was built in the 1st century ad to transport water to the city. jardins de la fontaine : these 18th - century gardens are built around the ruins of a roman sanctuary. they offer a peaceful retreat with beautiful fountains, statues, and shaded pathways. tour magne : this ancient roman tower, part of the city ' s original fortifications, offers panoramic views of nimes and the surrounding area7. temple of diana : located in the jardins de la fontaine, this roman temple ' s exact purpose remains a mystery, but it is believed to have been a library or a place of worship8.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Key Historical Sites in Nîmes",
+      "page_start": 5,
+      "page_end": 5,
+      "chunk_index": 103,
+      "token_count": 228,
+      "entities": [
+        "jardins de la",
+        "area7",
+        "diana"
+      ],
+      "keywords": [
+        "nime",
+        "century",
+        "temple",
+        "site",
+        "world",
+        "maison",
+        "carree",
+        "city",
+        "fontaine",
+        "arena"
+      ]
+    }
+  },
+  {
+    "id": 104,
+    "text": "carcassonne : a medieval fortress carcassonne is a fortified city in the languedoc region, known for its well - preserved medieval architecture. the city ' s history dates back to the roman period, but it is best known for its role in the medieval period as a stronghold during the albigensian crusade.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Carcassonne: A Medieval Fortress",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 104,
+      "token_count": 68,
+      "entities": [],
+      "keywords": [
+        "carcassonne",
+        "city",
+        "period",
+        "fortress",
+        "languedoc",
+        "region",
+        "architecture",
+        "history",
+        "role",
+        "stronghold"
+      ]
+    }
+  },
+  {
+    "id": 105,
+    "text": "key historical sites in carcassonne cite de carcassonne : this medieval fortress is a unesco world heritage site and one of the most impressive examples of medieval architecture in europe. it features double walls, 52 towers, and a castle. basilica of saints nazarius and celsus : this gothic - romanesque basilica, located within the fortress, dates back to the 11th century. it is known for its beautiful stained glass windows. chateau comtal : this castle, located within the cite, offers guided tours that provide insight into the history and architecture of carcassonne. pont vieux : this 14th - century bridge connects the medieval cite with the lower town. it offers stunning views of the fortress and the surrounding countryside. inquisition tower : one of the roman towers in carcassonne, it was used during the medieval inquisition to imprison and torture suspected heretics9. hoardings : carcassonne was the first fortress to use wooden hoardings during sieges, allowing defenders to shoot arrows and drop projectiles on attackers below10.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Key Historical Sites in Carcassonne",
+      "page_start": 6,
+      "page_end": 6,
+      "chunk_index": 105,
+      "token_count": 215,
+      "entities": [
+        "europe",
+        "heretics9"
+      ],
+      "keywords": [
+        "carcassonne",
+        "fortress",
+        "cite",
+        "tower",
+        "site",
+        "architecture",
+        "castle",
+        "basilica",
+        "century",
+        "inquisition"
+      ]
+    }
+  },
+  {
+    "id": 106,
+    "text": "arles : a roman treasure arles, located on the banks of the rhone river, is renowned for its roman and romanesque monuments. the city was an important roman settlement and later became a center of christian pilgrimage. key historical sites in arles arles amphitheatre : this roman amphitheater, built in the 1st century ad, is still used for events such as bullfights and concerts. it is one of the best - preserved roman structures in france. church of st. trophime : this romanesque church, built in the 12th century, is known for its stunning portal and cloister. it was an important stop on the pilgrimage route to santiago de compostela. alyscamps : this ancient roman necropolis, located just outside the city walls, was a major burial site in antiquity. it features a long avenue lined with sarcophagi. thermes de constantin : these roman baths, built in the 4th century ad, are a testament to the city ' s importance during the roman period. van gogh ' s influence : arles is also famous for its association with vincent van gogh, who created over 300 works of art during his time in the city. the van gogh foundation in arles celebrates his legacy. cryptoporticus : an underground gallery built by the romans in the 1st century bc, it served as a foundation for the forum and is one of the few remaining examples of such structures.",
+    "metadata": {
+      "document": "South of France - History.pdf",
+      "source": "",
+      "section_title": "Arles: A Roman Treasure",
+      "page_start": 8,
+      "page_end": 8,
+      "chunk_index": 106,
+      "token_count": 292,
+      "entities": [
+        "france",
+        "church of st.",
+        "necropolis",
+        "van gogh ' s",
+        "vincent van gogh",
+        "the van gogh foundation"
+      ],
+      "keywords": [
+        "arle",
+        "city",
+        "century",
+        "gogh",
+        "pilgrimage",
+        "site",
+        "structure",
+        "church",
+        "foundation",
+        "treasure"
+      ]
+    }
+  }
+]
