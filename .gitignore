@@ -1,3 +1,4 @@
 /venv
-/modules/__pycache__
+modules/prompting/__pycache__/
 /Legacy/venv
+.env 
