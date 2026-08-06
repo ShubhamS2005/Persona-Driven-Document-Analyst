@@ -122,12 +122,15 @@ class FullRAGPipeline:
 
         return {
 
-            "query":query,
+    "query": query,
 
-            "persona":persona,
+    "retrieved": results,
 
-            "sources":results,
+    "persona": persona,
 
-            "answer":answer
+    "context": context,
 
-        }
+    "prompt": prompt,
+
+    "answer": answer
+}

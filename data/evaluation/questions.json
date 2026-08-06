@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "query":"What are the historical sites in Carcassonne?",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Key Historical Sites in Carcassonne"
+        ]
+    },
+
+    {
+        "id":2,
+        "query":"What places should I visit in South France?",
+        "expected_persona":"tourist",
+        "expected_sources":[
+            "Comprehensive Guide to Major Cities in the South of France"
+        ]
+    },
+
+    {
+        "id":3,
+        "query":"Explain medieval architecture of Carcassonne",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Carcassonne: A Medieval Fortress"
+        ]
+    },
+
+    {
+        "id":4,
+        "query":"Explain the medieval importance of Carcassonne.",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Carcassonne: A Medieval Fortress"
+        ]
+    },
+
+    {
+        "id":5,
+        "query":"Why is Avignon historically important?",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Avignon: The City of Popes"
+        ]
+    },
+
+    {
+        "id":6,
+        "query":"Describe Roman heritage of Arles.",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Arles: A Roman Treasure"
+        ]
+    },
+
+    {
+        "id":7,
+        "query":"What is the history of Marseille?",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Marseille: The Oldest City in France"
+        ]
+    },
+
+    {
+        "id":8,
+        "query":"Explain the historical significance of Nice.",
+        "expected_persona":"historian",
+        "expected_sources":[
+            "Nice: The Jewel of the French Riviera"
+        ]
+    },
+
+    {
+        "id":9,
+        "query":"Which cities are best to visit in South France?",
+        "expected_persona":"tourist",
+        "expected_sources":[
+            "Comprehensive Guide to Major Cities in the South of France"
+        ]
+    },
+
+    {
+        "id":10,
+        "query":"What attractions should I see in Nice?",
+        "expected_persona":"tourist",
+        "expected_sources":[
+            "Nice: The Jewel of the French Riviera"
+        ]
+    }
+
+]
