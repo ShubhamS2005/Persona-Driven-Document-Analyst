@@ -4,12 +4,7 @@ import numpy as np
 
 
 class EmbeddingGenerator:
-
-
-    def __init__(
-        self,
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    ):
+    def __init__(self,model_name="sentence-transformers/all-MiniLM-L6-v2"):
 
         print("Loading embedding model...")
 
@@ -17,36 +12,16 @@ class EmbeddingGenerator:
             model_name
         )
 
-
-
-    def generate_embeddings(
-        self,
-        texts
-    ):
-
-
+    def generate_embeddings(self,texts):
         print(
             f"Generating embeddings for {len(texts)} chunks..."
         )
 
+        embeddings = self.model.encode(texts,batch_size=32,show_progress_bar=True,normalize_embeddings=True)
 
-        embeddings = self.model.encode(
-            texts,
-            batch_size=32,
-            show_progress_bar=True,
-            normalize_embeddings=True
-        )
+        embeddings=np.array(embeddings)
 
-
-        embeddings=np.array(
-            embeddings
-        )
-
-
-        print(
-            "Embedding shape:",
-            embeddings.shape
-        )
+        print("Embedding shape:",embeddings.shape)
 
 
         return embeddings

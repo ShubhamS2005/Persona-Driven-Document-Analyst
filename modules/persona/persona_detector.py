@@ -168,9 +168,9 @@ class PersonaDetector:
 
     "persona": persona,
 
-    "confidence": confidence,
+    "confidence": float(confidence),
 
-    "similarity_score": confidence,
+    "similarity_score": float(confidence),
 
 
     "details":
@@ -181,10 +181,11 @@ class PersonaDetector:
 
 
     "all_scores":
-    dict(
-        zip(
+    {
+        name: float(score)
+        for name, score in zip(
             self.names,
             final_scores
         )
-    )
+    }
 }

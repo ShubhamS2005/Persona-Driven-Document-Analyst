@@ -5,47 +5,26 @@ from modules.retrieval.cross_encoder import CrossEncoderReranker
 
 
 
-DATASET = (
-    "data/evaluation/retrieval_dataset.json"
-)
-
-
+DATASET = ("data/evaluation/retrieval_dataset.json")
 
 TOP_K = 5
 
 
-
 def load_dataset():
 
-
-    with open(
-        DATASET,
-        "r",
-        encoding="utf-8"
-    ) as f:
+    with open(DATASET,"r",encoding="utf-8") as f:
 
         return json.load(f)
 
 
 
 
-def keyword_match(
-    text,
-    keywords
-):
-
-
+def keyword_match(text,keywords):
     text = text.lower()
-
-
     matched = 0
 
-
     for word in keywords:
-
-
         if word.lower() in text:
-
             matched += 1
 
 
