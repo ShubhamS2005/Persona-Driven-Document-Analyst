@@ -2,6 +2,7 @@ import os
 import json
 import gc
 
+
 from modules.ingestion.document_loader import DocumentLoader
 
 from modules.processing.cleaner import Cleaner
@@ -9,14 +10,24 @@ from modules.processing.structure_builder import StructureBuilder
 from modules.processing.semantic_chunker import SemanticChunker
 from modules.processing.metadata_enricher import MetadataEnricher
 
+
+from modules.embedding.embedding_generator import EmbeddingGenerator
+from modules.retrieval.vector_store import VectorStore
+
+
+
 INPUT_DIR = "data/input_pdfs"
 
-OUTPUT = "data/processed/raw_documents.json"
 
-P_OUTPUT="data/processed/processed_chunks.json"
+RAW_OUTPUT = "data/processed/raw_documents.json"
+
+PROCESSED_OUTPUT = "data/processed/processed_chunks.json"
+
+
 
 
 def phase_1():
+
 
     loader = DocumentLoader()
 
@@ -29,32 +40,40 @@ def phase_1():
             continue
 
 
-        path = os.path.join(
+        path=os.path.join(
             INPUT_DIR,
             file
         )
 
 
-        print("\nProcessing:", file)
+        print(
+            "\nProcessing:",
+            file
+        )
 
 
         try:
 
-            docs = loader.load(path)
+            docs=loader.load(
+                path
+            )
 
 
             if not docs:
 
                 print(
-                    f"No data extracted from {file}"
+                    "No extraction:",
+                    file
                 )
 
                 continue
 
 
+
             for d in docs:
 
-                d["document"] = file
+                d["document"]=file
+
 
 
             all_documents.extend(
@@ -63,20 +82,24 @@ def phase_1():
 
 
             print(
-                f"Added {len(docs)} elements"
+                "Added:",
+                len(docs),
+                "elements"
             )
 
 
         except Exception as e:
 
+
             print(
-                f"Failed processing {file}: {e}"
+                "Failed:",
+                file,
+                e
             )
 
 
         finally:
 
-            # release memory after every PDF
             gc.collect()
 
 
@@ -87,11 +110,13 @@ def phase_1():
     )
 
 
+
     with open(
-        OUTPUT,
+        RAW_OUTPUT,
         "w",
         encoding="utf-8"
     ) as f:
+
 
         json.dump(
             all_documents,
@@ -101,25 +126,35 @@ def phase_1():
         )
 
 
+
     print(
         "\nSaved:",
         len(all_documents),
         "elements"
     )
 
+
+
+
+
 def phase_2():
 
 
+    print("\nPHASE 2 STARTED")
+
+
     with open(
-        OUTPUT,
+        RAW_OUTPUT,
         encoding="utf-8"
     ) as f:
+
 
         elements=json.load(f)
 
 
 
     cleaner=Cleaner()
+
 
     elements=cleaner.clean_elements(
         elements
@@ -129,6 +164,7 @@ def phase_2():
 
     builder=StructureBuilder()
 
+
     sections=builder.build_sections(
         elements
     )
@@ -136,6 +172,7 @@ def phase_2():
 
 
     chunker=SemanticChunker()
+
 
     chunks=chunker.create_chunks(
         sections
@@ -145,17 +182,26 @@ def phase_2():
 
     enricher=MetadataEnricher()
 
+
     chunks=enricher.enrich(
         chunks
     )
 
 
 
+    os.makedirs(
+        "data/processed",
+        exist_ok=True
+    )
+
+
+
     with open(
-        P_OUTPUT,
+        PROCESSED_OUTPUT,
         "w",
         encoding="utf-8"
     ) as f:
+
 
         json.dump(
             chunks,
@@ -165,13 +211,101 @@ def phase_2():
         )
 
 
+
     print(
-        "Generated chunks:",
+        "\nGenerated chunks:",
         len(chunks)
     )
 
 
-if __name__ == "__main__":
+
+
+
+
+def phase_3():
+
+
+    print("\nPHASE 3 STARTED")
+
+
+    with open(
+        PROCESSED_OUTPUT,
+        encoding="utf-8"
+    ) as f:
+
+
+        chunks=json.load(f)
+
+
+
+    print(
+        "Loaded chunks:",
+        len(chunks)
+    )
+
+
+
+    texts=[
+
+        chunk["text"]
+
+        for chunk in chunks
+
+    ]
+
+
+
+    # -------------------------
+    # Generate Embeddings
+    # -------------------------
+
+    generator=EmbeddingGenerator()
+
+
+
+    embeddings=generator.generate_embeddings(
+        texts
+    )
+
+
+
+    # -------------------------
+    # Create Vector Store
+    # -------------------------
+
+    vector_store=VectorStore()
+
+
+
+    index=vector_store.create_index(
+        embeddings
+    )
+
+
+
+    vector_store.save(
+        index,
+        embeddings,
+        chunks
+    )
+
+
+
+    print(
+        "\nPhase 3 completed"
+    )
+
+
+
+
+
+
+
+if __name__=="__main__":
+
 
     # phase_1()
-    phase_2()
+    
+    # phase_2()
+
+    phase_3()
