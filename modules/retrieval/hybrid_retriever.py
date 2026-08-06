@@ -15,16 +15,15 @@ class HybridRetriever:
         self.dense = DenseRetriever()
 
 
-        self.documents = [
-            c["text"]
-            for c in self.dense.chunks
-        ]
+        self.documents = self.dense.chunks
 
 
-        # Better tokenization for BM25
-        tokenized_docs = [
 
-            self._tokenize(doc)
+        tokenized = [
+
+            self._tokenize(
+                doc["text"]
+            )
 
             for doc in self.documents
 
@@ -32,17 +31,12 @@ class HybridRetriever:
 
 
         self.bm25 = BM25Okapi(
-            tokenized_docs
+            tokenized
         )
 
 
 
     def _tokenize(self, text):
-
-        """
-        Remove stop-like small tokens
-        and keep meaningful words
-        """
 
         return re.findall(
             r"\b[a-z]{3,}\b",
@@ -53,10 +47,6 @@ class HybridRetriever:
 
     def _normalize(self, scores):
 
-        """
-        Min-Max normalization
-        Converts scores into 0-1 range
-        """
 
         scores = list(scores)
 
@@ -70,6 +60,7 @@ class HybridRetriever:
         max_score = max(scores)
 
 
+
         if max_score == min_score:
 
             return [
@@ -78,12 +69,13 @@ class HybridRetriever:
             ]
 
 
+
         return [
 
             float(
-                (score - min_score)
+                (score-min_score)
                 /
-                (max_score - min_score)
+                (max_score-min_score)
             )
 
             for score in scores
@@ -104,6 +96,7 @@ class HybridRetriever:
         # Dense Retrieval
         # =========================
 
+
         dense_results = self.dense.retrieve(
             query,
             top_k=len(self.documents)
@@ -115,16 +108,18 @@ class HybridRetriever:
 
         for result in dense_results:
 
+
             dense_score_map[
                 result["text"]
             ] = result["score"]
 
 
 
+
         dense_scores = [
 
             dense_score_map.get(
-                doc,
+                doc["text"],
                 0
             )
 
@@ -144,30 +139,24 @@ class HybridRetriever:
         )
 
 
-        bm25_scores = (
-            self.bm25.get_scores(
-                query_tokens
-            )
+        bm25_scores = self.bm25.get_scores(
+            query_tokens
         )
 
 
 
         # =========================
-        # Normalize Scores
+        # Normalize
         # =========================
 
 
-        dense_scores_norm = (
-            self._normalize(
-                dense_scores
-            )
+        dense_scores_norm = self._normalize(
+            dense_scores
         )
 
 
-        bm25_scores_norm = (
-            self._normalize(
-                bm25_scores
-            )
+        bm25_scores_norm = self._normalize(
+            bm25_scores
         )
 
 
@@ -177,10 +166,10 @@ class HybridRetriever:
         # =========================
 
 
-        results = []
+        results=[]
 
 
-        for idx, doc in enumerate(
+        for idx,doc in enumerate(
             self.documents
         ):
 
@@ -199,42 +188,60 @@ class HybridRetriever:
             )
 
 
+
             results.append(
 
-    {
-        "text": doc,
+                {
 
-        "metadata":
-        self.dense.chunks[idx].get(
-            "metadata",
-            {}
-        ),
-
-        "score":
-        float(hybrid_score),
-
-        "dense_score":
-        float(dense_scores[idx]),
-
-        "bm25_score":
-        float(bm25_scores[idx]),
-
-        "dense_normalized":
-        float(dense_scores_norm[idx]),
-
-        "bm25_normalized":
-        float(bm25_scores_norm[idx]),
-
-        "retriever":
-        "hybrid"
-
-    }
-
-)
+                "text":
+                doc["text"],
 
 
+                "metadata":
+                doc.get(
+                    "metadata",
+                    {}
+                ),
 
-        # Highest hybrid score first
+
+                "score":
+                float(
+                    hybrid_score
+                ),
+
+
+                "dense_score":
+                float(
+                    dense_scores[idx]
+                ),
+
+
+                "bm25_score":
+                float(
+                    bm25_scores[idx]
+                ),
+
+
+                "dense_normalized":
+                float(
+                    dense_scores_norm[idx]
+                ),
+
+
+                "bm25_normalized":
+                float(
+                    bm25_scores_norm[idx]
+                ),
+
+
+                "retriever":
+                "hybrid"
+
+                }
+
+            )
+
+
 
         results.sort(
 

@@ -1,33 +1,32 @@
 class PromptBuilder:
+    def build(self,query,context,persona):
 
 
+        prompt = f"""
+You are an AI assistant answering as a:
 
-    def build(
-        self,
-        query,
-        context,
-        persona
-    ):
-
-
-        prompt=f"""
-
-You are an AI assistant answering as:
-
+PERSONA:
 {persona['persona']}
 
 
-Answer style:
-
+ANSWER STYLE:
 {persona['details']['style']}
 
 
-Instructions:
+YOUR ROLE:
 
-- Use only the provided document context.
-- Do not invent facts.
-- Mention sources when possible.
-- Follow the persona perspective.
+Answer the user's question from the perspective of the selected persona.
+
+
+GROUNDING RULES:
+
+- Use only the provided document evidence.
+- Do not use outside knowledge.
+- Do not hallucinate facts.
+- If the answer is not available in the documents, clearly say:
+  "The provided documents do not contain enough information."
+- Prefer specific names, dates, places, and historical facts from the sources.
+- Mention relevant source sections when possible.
 
 
 USER QUESTION:
@@ -36,7 +35,7 @@ USER QUESTION:
 
 
 
-CONTEXT:
+DOCUMENT EVIDENCE:
 
 {context}
 
@@ -45,6 +44,5 @@ CONTEXT:
 FINAL ANSWER:
 
 """
-
 
         return prompt.strip()
