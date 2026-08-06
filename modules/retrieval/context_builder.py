@@ -3,110 +3,91 @@ class ContextBuilder:
 
     def __init__(
         self,
-        max_context_length=None
+        max_sources=5
     ):
 
-        self.max_context_length = max_context_length
+        self.max_sources=max_sources
 
 
 
     def build(
         self,
-        retrieved_chunks
+        retrieved_chunks,
+        persona=None
     ):
 
 
-        if not retrieved_chunks:
-
-            return ""
+        context=[]
 
 
 
-        context_parts=[]
+        if persona:
+
+
+            context.append(
+                "USER PERSONA\n"
+            )
+
+
+            context.append(
+
+                f"""
+Role:
+{persona['persona']}
+
+Answer Style:
+{persona['details']['style']}
+
+Focus Areas:
+{', '.join(persona['details']['focus'])}
+
+"""
+            )
+
+
+
+        context.append(
+            "\nDOCUMENT SOURCES\n"
+        )
 
 
 
         for idx,chunk in enumerate(
-            retrieved_chunks,
+            retrieved_chunks[:self.max_sources],
             start=1
         ):
 
 
-            metadata = chunk.get(
-                "metadata",
-                {}
-            )
+            metadata=chunk["metadata"]
 
 
-            document = metadata.get(
-                "document",
-                "Unknown"
-            )
-
-
-            section = metadata.get(
-                "section_title",
-                "Unknown"
-            )
-
-
-            page_start = metadata.get(
-                "page_start",
-                "?"
-            )
-
-
-            page_end = metadata.get(
-                "page_end",
-                "?"
-            )
-
-
-
-            text = chunk.get(
-                "text",
-                ""
-            )
-
-
-
-            source_block = f"""
+            source=f"""
 
 ===== SOURCE {idx} =====
 
 Document:
-{document}
+{metadata.get('document')}
 
 Section:
-{section}
+{metadata.get('section_title')}
 
-Page:
-{page_start} - {page_end}
+Pages:
+{metadata.get('page_start')}
+-
+{metadata.get('page_end')}
 
 
 Content:
 
-{text}
+{chunk['text']}
 
 """
 
 
-            context_parts.append(
-                source_block.strip()
+            context.append(
+                source
             )
 
 
 
-        context="\n\n".join(
-            context_parts
-        )
-
-
-        if self.max_context_length:
-
-            context=context[
-                :self.max_context_length
-            ]
-
-
-        return context
+        return "\n".join(context)
