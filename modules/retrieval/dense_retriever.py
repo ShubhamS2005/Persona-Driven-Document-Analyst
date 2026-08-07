@@ -14,9 +14,17 @@ class DenseRetriever:
 
         self.vector_store = VectorStore()
 
+        self.index = None
+        self.embeddings = None
+        self.chunks = []
+
         self.load_store()
 
 
+
+    # --------------------------------
+    # LOAD VECTOR STORE
+    # --------------------------------
 
     def load_store(self):
 
@@ -29,11 +37,29 @@ class DenseRetriever:
 
 
 
+        if self.index is None:
+
+            print(
+                "Dense Retriever: empty store"
+            )
+
+            self.chunks = []
+
+
+
+    # --------------------------------
+    # REFRESH AFTER UPLOAD / DELETE
+    # --------------------------------
+
     def refresh(self):
 
-        print("Refreshing Dense Retriever...")
+        print(
+            "Refreshing Dense Retriever..."
+        )
+
 
         self.load_store()
+
 
         print(
             "Dense Retriever refreshed:",
@@ -44,7 +70,7 @@ class DenseRetriever:
 
 
     # --------------------------------
-    # Search
+    # SEARCH
     # --------------------------------
 
     def retrieve(
@@ -52,6 +78,18 @@ class DenseRetriever:
         query,
         top_k=5
     ):
+
+
+        # No documents yet
+
+        if self.index is None:
+
+            print(
+                "No vectors available"
+            )
+
+            return []
+
 
 
         query_embedding = (
@@ -69,6 +107,7 @@ class DenseRetriever:
         )
 
 
+
         scores, indices = (
             self.index.search(
                 query_embedding,
@@ -77,7 +116,9 @@ class DenseRetriever:
         )
 
 
-        results=[]
+
+        results = []
+
 
 
         for score, idx in zip(
@@ -93,28 +134,27 @@ class DenseRetriever:
 
             chunk = self.chunks[idx]
 
-
             results.append(
 
                 {
 
-                "text":
-                chunk["text"],
+                    "text":
+                    chunk["text"],
 
 
-                "metadata":
-                chunk.get(
-                    "metadata",
-                    {}
-                ),
+                    "metadata":
+                    chunk.get(
+                        "metadata",
+                        {}
+                    ),
 
 
-                "score":
-                float(score),
+                    "score":
+                    float(score),
 
 
-                "retriever":
-                "dense"
+                    "retriever":
+                    "dense"
 
                 }
 

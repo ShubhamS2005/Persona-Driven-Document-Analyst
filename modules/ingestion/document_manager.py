@@ -12,7 +12,7 @@ class DocumentManager:
         path="data/documents.json"
     ):
 
-        self.path=path
+        self.path = path
 
 
         if not os.path.exists(path):
@@ -32,7 +32,8 @@ class DocumentManager:
     def load(self):
 
         with open(
-            self.path
+            self.path,
+            encoding="utf-8"
         ) as f:
 
             return json.load(f)
@@ -46,13 +47,15 @@ class DocumentManager:
 
         with open(
             self.path,
-            "w"
+            "w",
+            encoding="utf-8"
         ) as f:
 
             json.dump(
                 documents,
                 f,
-                indent=4
+                indent=4,
+                ensure_ascii=False
             )
 
 
@@ -63,28 +66,20 @@ class DocumentManager:
         chunks
     ):
 
-
-        docs=self.load()
+        docs = self.load()
 
 
         docs.append({
 
-            "name":
-            name,
+            "name": name,
 
-
-            "chunks":
-            chunks,
-
+            "chunks": chunks,
 
             "uploaded":
-            str(
-                datetime.now()
-            ),
-
+                str(datetime.now()),
 
             "status":
-            "indexed"
+                "indexed"
 
         })
 
@@ -96,8 +91,67 @@ class DocumentManager:
 
 
     def all(self):
-        data = self.load()
 
-        print("LOAD TYPE:", type(data))
-        print("LOAD VALUE:", data)
-        return data
+        return self.load()
+
+
+
+
+
+    # ==========================
+    # DELETE DOCUMENT
+    # ==========================
+
+
+    def remove(
+        self,
+        document_name
+    ):
+
+
+        docs = self.load()
+
+
+        updated_docs = []
+
+
+        removed = False
+
+
+
+        for doc in docs:
+
+
+            # support old format also
+
+            current_name = (
+
+                doc.get("name")
+
+                or
+
+                doc.get("document")
+
+            )
+
+
+            if current_name == document_name:
+
+                removed = True
+
+                continue
+
+
+
+            updated_docs.append(
+                doc
+            )
+
+
+
+        self.save(
+            updated_docs
+        )
+
+
+        return removed

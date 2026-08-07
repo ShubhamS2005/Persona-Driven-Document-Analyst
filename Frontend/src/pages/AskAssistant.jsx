@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import { Send, Brain, Loader2, User } from "lucide-react";
+import { Send, Brain, Loader2, User, FileText } from "lucide-react";
+
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -29,21 +30,17 @@ function AskAssistant() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "http://127.0.0.1:5000/ask",
+      const response = await fetch("http://127.0.0.1:5000/ask", {
+        method: "POST",
 
-        {
-          method: "POST",
-
-          headers: {
-            "Content-Type": "application/json",
-          },
-
-          body: JSON.stringify({
-            query: userMessage,
-          }),
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+
+        body: JSON.stringify({
+          query: userMessage,
+        }),
+      });
 
       const data = await response.json();
 
@@ -54,15 +51,17 @@ function AskAssistant() {
           role: "assistant",
 
           text: data.answer,
+
+          persona: data.persona,
+
+          sources: data.sources || [],
         },
       ]);
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-
         {
           role: "assistant",
-
           text: "Unable to connect with Persona RAG API.",
         },
       ]);
@@ -74,48 +73,50 @@ function AskAssistant() {
   return (
     <div
       className="
-      max-w-5xl
-      mx-auto
+max-w-5xl
+mx-auto
 
-      h-[calc(100vh-120px)]
+h-[calc(100vh-120px)]
 
-      flex
-      flex-col
-
-      "
+flex
+flex-col
+"
     >
-      {/* Header */}
+      {/* HEADER */}
 
       <div
         className="
-        bg-white
+bg-gradient-to-r
+from-stone-50
+to-amber-50
 
-        rounded-3xl
+rounded-3xl
 
-        border
-        border-stone-200
+border
+border-stone-200
 
-        shadow-sm
+shadow-sm
 
-        p-6
+p-6
 
-        mb-5
-        "
+mb-5
+"
       >
         <div
           className="
-          flex
-          items-center
-          gap-3
-          "
+flex
+items-center
+gap-4
+"
         >
           <div
             className="
-            p-3
-            rounded-2xl
+p-3
 
-            bg-amber-100
-            "
+rounded-2xl
+
+bg-amber-100
+"
           >
             <Brain size={28} className="text-amber-700" />
           </div>
@@ -123,239 +124,338 @@ function AskAssistant() {
           <div>
             <h1
               className="
-              text-2xl
-              font-bold
-              text-stone-800
-              "
+text-2xl
+font-bold
+text-stone-800
+"
             >
               Persona RAG Assistant
             </h1>
 
             <p
               className="
-              text-sm
-              text-stone-500
-              "
+text-sm
+text-stone-500
+"
             >
-              Ask questions from your indexed documents
+              AI powered document historian
             </p>
           </div>
         </div>
       </div>
 
-      {/* Chat Area */}
+      {/* CHAT AREA */}
 
       <div
         className="
-        flex-1
+flex-1
 
-        overflow-y-auto
+overflow-y-auto
 
-        space-y-5
+space-y-6
 
-        pr-2
-        "
+pr-2
+"
       >
         {messages.map((msg, index) => (
           <div
             key={index}
             className={`
-            
-            flex
+flex
 
-            ${msg.role === "user" ? "justify-end" : "justify-start"}
+${msg.role === "user" ? "justify-end" : "justify-start"}
 
-            `}
+`}
           >
-            <div
-              className={`
-              
-              max-w-[80%]
+            {/* USER MESSAGE */}
 
-              rounded-3xl
-
-              px-6
-
-              py-5
-
-
-              ${
-                msg.role === "user"
-                  ? "bg-amber-600 text-white"
-                  : "bg-white border border-stone-200 text-stone-700 shadow-sm"
-              }
-
-              `}
-            >
+            {msg.role === "user" ? (
               <div
                 className="
-              flex
-              items-center
-              gap-2
-              mb-3
-              "
-              >
-                {msg.role === "user" ? <User size={18} /> : <Brain size={18} />}
+max-w-[75%]
 
-                <span
+bg-amber-600
+
+text-white
+
+rounded-3xl
+
+px-6
+
+py-4
+
+shadow-sm
+"
+              >
+                <div
                   className="
-              text-sm
-              font-semibold
-              "
+flex
+gap-2
+items-center
+
+mb-2
+"
                 >
-                  {msg.role === "user" ? "You" : "Persona RAG"}
-                </span>
+                  <User size={18} />
+
+                  <span
+                    className="
+font-semibold
+text-sm
+"
+                  >
+                    You
+                  </span>
+                </div>
+
+                <p>{msg.text}</p>
               </div>
+            ) : (
+              /* ASSISTANT */
 
               <div
                 className="
-prose
-prose-stone
-max-w-none
+max-w-[85%]
 
-text-sm
+bg-white
 
-leading-8
+border
+
+border-stone-200
+
+rounded-3xl
+
+shadow-sm
+
+p-6
 "
               >
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={{
-                    h1: ({ children }) => (
-                      <h1
-                        className="
-text-2xl
-font-bold
-text-stone-800
-mt-4
-mb-3
-"
-                      >
-                        {children}
-                      </h1>
-                    ),
+                {/* Persona */}
 
-                    h2: ({ children }) => (
-                      <h2
-                        className="
-text-xl
-font-bold
-text-stone-800
-mt-5
-mb-3
-"
-                      >
-                        {children}
-                      </h2>
-                    ),
+                <div
+                  className="
+flex
+items-center
+justify-between
 
-                    h3: ({ children }) => (
+mb-5
+"
+                >
+                  <div
+                    className="
+flex
+items-center
+gap-3
+"
+                  >
+                    <div
+                      className="
+p-2
+rounded-xl
+
+bg-amber-100
+"
+                    >
+                      <Brain size={20} className="text-amber-700" />
+                    </div>
+
+                    <div>
                       <h3
                         className="
-text-lg
-font-semibold
-text-amber-700
-mt-4
-"
-                      >
-                        {children}
-                      </h3>
-                    ),
-
-                    strong: ({ children }) => (
-                      <strong
-                        className="
 font-bold
-text-stone-900
+text-stone-800
 "
                       >
-                        {children}
-                      </strong>
-                    ),
+                        {msg.persona?.name || "Persona RAG"}
+                      </h3>
 
-                    li: ({ children }) => (
-                      <li
-                        className="
-ml-5
-mb-3
+                     
+                    </div>
+                  </div>
+                </div>
+
+                {/* ANSWER */}
+
+                <div
+                  className="
+prose
+
+prose-stone
+
+max-w-none
+
+leading-8
+
+text-sm
 "
-                      >
-                        {children}
-                      </li>
-                    ),
-                  }}
                 >
-                  {msg.text}
-                </ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {msg.text}
+                  </ReactMarkdown>
+                </div>
+
+                {/* SOURCES */}
+
+                {msg.sources && msg.sources.length > 0 && (
+                  <div
+                    className="
+mt-6
+
+border-t
+
+border-stone-200
+
+pt-5
+"
+                  >
+                    <h4
+                      className="
+font-bold
+
+text-stone-800
+
+mb-4
+
+flex
+
+items-center
+
+gap-2
+"
+                    >
+                      <FileText size={18} />
+                      Sources
+                    </h4>
+
+                    <div
+                      className="
+space-y-3
+"
+                    >
+                      {msg.sources.map((source, i) => (
+                        <div
+                          key={i}
+                          className="
+bg-stone-50
+
+border
+
+border-stone-200
+
+rounded-2xl
+
+p-4
+"
+                        >
+                          <p
+                            className="
+font-semibold
+text-stone-800
+"
+                          >
+                            📄 {source.document}
+                          </p>
+
+                          <p
+                            className="
+text-sm
+text-stone-600
+mt-1
+"
+                          >
+                            Section:
+                            {source.section || "N/A"}
+                          </p>
+
+                          <p
+                            className="
+text-xs
+text-stone-500
+mt-2
+"
+                          >
+                            Pages:
+                            {source.pages?.join("-")}
+                            &nbsp; | &nbsp; Score:
+                            {(source.score * 100).toFixed(1)}%
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
+            )}
           </div>
         ))}
 
         {loading && (
           <div
             className="
-          flex
-          justify-start
-          "
+flex
+justify-start
+"
           >
             <div
               className="
-            bg-white
+bg-white
 
-            border
+border
 
-            border-stone-200
+rounded-3xl
 
-            rounded-3xl
+px-6
 
-            px-6
+py-4
 
-            py-4
+flex
 
-            flex
+gap-3
 
-            items-center
-
-            gap-3
-            "
+items-center
+"
             >
-              <Loader2 size={18} className="animate-spin text-amber-600" />
+              <Loader2
+                className="
+animate-spin
+text-amber-600
+"
+              />
 
               <span
                 className="
-              text-stone-500
-              "
+text-stone-500
+"
               >
-                Thinking...
+                Searching documents...
               </span>
             </div>
           </div>
         )}
       </div>
 
-      {/* Input */}
+      {/* INPUT */}
 
       <div
         className="
-        mt-5
+mt-5
 
-        bg-white
+bg-white
 
-        rounded-3xl
+border
 
-        border
+border-stone-200
 
-        border-stone-200
+rounded-3xl
 
-        shadow-sm
+shadow-sm
 
-        p-4
+p-4
 
-        flex
+flex
 
-        gap-3
-        "
+gap-3
+"
       >
         <textarea
           value={query}
@@ -367,57 +467,51 @@ mb-3
               askQuestion();
             }
           }}
-          placeholder="Ask something about your documents..."
+          placeholder="
+Ask from your documents...
+"
           className="
-        flex-1
+flex-1
 
-        resize-none
+h-20
 
-        h-20
+resize-none
 
-        rounded-2xl
+rounded-2xl
 
-        p-4
+bg-stone-50
 
-        outline-none
+border
 
-        bg-stone-50
+border-stone-200
 
-        border
+p-4
 
-        border-stone-200
+outline-none
 
-        focus:ring-2
+focus:ring-2
 
-        focus:ring-amber-400
-
-        "
+focus:ring-amber-400
+"
         />
 
         <button
           onClick={askQuestion}
           className="
-        self-end
+bg-amber-600
 
-        p-4
+hover:bg-amber-700
 
-        rounded-2xl
+text-white
 
-        bg-amber-600
+rounded-2xl
 
-        hover:bg-amber-700
+px-5
 
-        text-white
-
-        transition
-
-        "
+transition
+"
         >
-          {loading ? (
-            <Loader2 size={20} className="animate-spin" />
-          ) : (
-            <Send size={20} />
-          )}
+          {loading ? <Loader2 className="animate-spin" /> : <Send />}
         </button>
       </div>
     </div>

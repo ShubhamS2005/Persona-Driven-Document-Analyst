@@ -5,7 +5,7 @@ from modules.pipeline.full_pipeline import FullRAGPipeline
 from modules.pipeline.ingestion_pipeline import IngestionPipeline
 from modules.retrieval.retriever import Retriever
 from modules.ingestion.document_manager import DocumentManager
-
+from modules.retrieval.vector_store import VectorStore
 app = Flask(__name__)
 CORS(app)
 
@@ -18,6 +18,7 @@ retriever = Retriever()
 pipeline = FullRAGPipeline(retriever=retriever)
 ingestion = IngestionPipeline()
 document_manager = DocumentManager()
+vector_store = VectorStore()
 print("API Ready")
 
 @app.route( "/health", methods=["GET"])
@@ -110,10 +111,9 @@ def upload():
     file.save(path)
 
     result = ingestion.ingest_pdf(path)
-
+    document_manager.add(result["document"],result["chunks"])
     retriever.refresh()
 
-    document_manager.add(result["document"],result["chunks"])
 
     return {
         "message":
@@ -143,6 +143,28 @@ def get_documents():
     print("RESPONSE TYPE:", type(response["documents"]))
 
     return jsonify(response)
+
+@app.route("/documents/<name>",methods=["DELETE"])
+def delete_document(name):
+    removed = document_manager.remove(name)
+    if not removed:
+        return jsonify({"error":"Document not found"}),404
+    # Remove vectors
+    vector_store.remove_document(name)
+    # Refresh retriever
+
+    retriever.refresh()
+    # Remove original PDF
+
+    pdf_path = os.path.join("data/input_pdfs",name)
+    if os.path.exists(pdf_path):
+        try:
+            os.remove(pdf_path)
+            print("Deleted PDF:",pdf_path)
+        except Exception as e:
+            print("PDF delete failed:",e)
+
+    return jsonify({"message":"Document deleted successfully"})
 
 if __name__ == "__main__":
 

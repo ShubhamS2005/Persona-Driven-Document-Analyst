@@ -1,23 +1,16 @@
-import json
-
+import pickle
 
 with open(
-"data/processed/processed_chunks.json"
+    "data/vector_store/chunks.pkl",
+    "rb"
 ) as f:
 
-    chunks=json.load(f)
+    chunks = pickle.load(f)
 
 
-print("Total chunks:",len(chunks))
+print(len(chunks))
 
-
-empty=[
-c for c in chunks
-if not c["text"].strip()
-]
-
-
-print("Empty chunks:",len(empty))
-
-
-print(chunks[0])
+for c in chunks[:5]:
+    print(
+        c["metadata"]["document"]
+    )

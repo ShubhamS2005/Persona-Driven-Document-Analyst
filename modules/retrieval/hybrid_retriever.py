@@ -15,7 +15,52 @@ class HybridRetriever:
         self.dense = DenseRetriever()
 
 
+        self.documents = []
+
+
+        self.bm25 = None
+
+
+        self.build_bm25()
+
+
+
+    # --------------------------------
+    # TOKENIZER
+    # --------------------------------
+
+    def _tokenize(self, text):
+
+        return re.findall(
+            r"\b[a-z]{3,}\b",
+            text.lower()
+        )
+
+
+
+    # --------------------------------
+    # BUILD BM25 SAFELY
+    # --------------------------------
+
+    def build_bm25(self):
+
+
         self.documents = self.dense.chunks
+
+
+
+        if not self.documents:
+
+
+            print(
+                "Hybrid Retriever: empty store"
+            )
+
+
+            self.bm25 = None
+
+
+            return
 
 
 
@@ -30,20 +75,23 @@ class HybridRetriever:
         ]
 
 
+
         self.bm25 = BM25Okapi(
             tokenized
         )
 
 
-
-    def _tokenize(self, text):
-
-        return re.findall(
-            r"\b[a-z]{3,}\b",
-            text.lower()
+        print(
+            "BM25 initialized:",
+            len(self.documents),
+            "chunks"
         )
 
 
+
+    # --------------------------------
+    # NORMALIZE
+    # --------------------------------
 
     def _normalize(self, scores):
 
@@ -51,8 +99,10 @@ class HybridRetriever:
         scores = list(scores)
 
 
-        if len(scores) == 0:
+        if not scores:
+
             return []
+
 
 
         min_score = min(scores)
@@ -64,8 +114,11 @@ class HybridRetriever:
         if max_score == min_score:
 
             return [
+
                 0.0
+
                 for _ in scores
+
             ]
 
 
@@ -84,6 +137,10 @@ class HybridRetriever:
 
 
 
+    # --------------------------------
+    # RETRIEVE
+    # --------------------------------
+
     def retrieve(
         self,
         query,
@@ -92,35 +149,50 @@ class HybridRetriever:
     ):
 
 
-        # =========================
-        # Dense Retrieval
-        # =========================
+        if not self.documents:
+
+            print(
+                "No documents available"
+            )
+
+            return []
+
+
+
+        # -----------------------------
+        # Dense retrieval
+        # -----------------------------
 
 
         dense_results = self.dense.retrieve(
+
             query,
+
             top_k=len(self.documents)
+
         )
 
 
-        dense_score_map = {}
 
+        dense_score_map = {
 
-        for result in dense_results:
+            result["text"]:
+            result["score"]
 
+            for result in dense_results
 
-            dense_score_map[
-                result["text"]
-            ] = result["score"]
-
+        }
 
 
 
         dense_scores = [
 
             dense_score_map.get(
+
                 doc["text"],
+
                 0
+
             )
 
             for doc in self.documents
@@ -129,44 +201,60 @@ class HybridRetriever:
 
 
 
-        # =========================
-        # BM25 Retrieval
-        # =========================
+        # -----------------------------
+        # BM25 retrieval
+        # -----------------------------
 
 
-        query_tokens = self._tokenize(
-            query
-        )
+        if self.bm25 is not None:
 
 
-        bm25_scores = self.bm25.get_scores(
-            query_tokens
-        )
+            query_tokens = self._tokenize(
+                query
+            )
+
+
+            bm25_scores = self.bm25.get_scores(
+                query_tokens
+            )
+
+
+        else:
+
+
+            bm25_scores = [
+
+                0
+
+                for _ in self.documents
+
+            ]
 
 
 
-        # =========================
+        # -----------------------------
         # Normalize
-        # =========================
+        # -----------------------------
 
 
-        dense_scores_norm = self._normalize(
+        dense_norm = self._normalize(
             dense_scores
         )
 
 
-        bm25_scores_norm = self._normalize(
+        bm25_norm = self._normalize(
             bm25_scores
         )
 
 
 
-        # =========================
+        # -----------------------------
         # Fusion
-        # =========================
+        # -----------------------------
 
 
         results=[]
+
 
 
         for idx,doc in enumerate(
@@ -174,72 +262,67 @@ class HybridRetriever:
         ):
 
 
-            hybrid_score = (
+            score = (
 
                 alpha *
-                dense_scores_norm[idx]
+                dense_norm[idx]
 
                 +
 
                 (1-alpha)
                 *
-                bm25_scores_norm[idx]
+                bm25_norm[idx]
 
             )
 
 
 
-            results.append(
+            results.append({
 
-                {
 
                 "text":
+
                 doc["text"],
 
 
+
                 "metadata":
+
                 doc.get(
                     "metadata",
                     {}
                 ),
 
 
+
                 "score":
-                float(
-                    hybrid_score
-                ),
+
+                float(score),
+
 
 
                 "dense_score":
+
                 float(
                     dense_scores[idx]
                 ),
 
 
+
                 "bm25_score":
+
                 float(
                     bm25_scores[idx]
                 ),
 
 
-                "dense_normalized":
-                float(
-                    dense_scores_norm[idx]
-                ),
-
-
-                "bm25_normalized":
-                float(
-                    bm25_scores_norm[idx]
-                ),
-
 
                 "retriever":
+
                 "hybrid"
 
-                }
 
-            )
+            })
 
 
 
@@ -254,71 +337,31 @@ class HybridRetriever:
 
         return results[:top_k]
 
-    def load_retriever(self):
-
-        print("Loading Hybrid Retriever...")
 
 
-        self.dense = DenseRetriever()
-
-
-        self.documents = self.dense.chunks
-
-
-
-        tokenized = [
-
-            self._tokenize(
-                doc["text"]
-            )
-
-            for doc in self.documents
-
-        ]
-
-
-        self.bm25 = BM25Okapi(
-            tokenized
-        )
-
-
-        print(
-            "Retriever loaded with",
-            len(self.documents),
-            "documents"
-        )
-
-
+    # --------------------------------
+    # REFRESH AFTER UPLOAD / DELETE
+    # --------------------------------
 
     def refresh(self):
 
-        print("Refreshing Hybrid Retriever...")
-    
-    
-        self.dense.refresh()
-    
-    
-        self.documents = self.dense.chunks
-    
-    
-        tokenized = [
-        
-            self._tokenize(
-                doc["text"]
-            )
-    
-            for doc in self.documents
-    
-        ]
-    
-    
-        self.bm25 = BM25Okapi(
-            tokenized
-        )
-    
-    
+
         print(
-            "Hybrid updated:",
+            "Refreshing Hybrid Retriever..."
+        )
+
+
+
+        self.dense.refresh()
+
+
+
+        self.build_bm25()
+
+
+
+        print(
+            "Hybrid Retriever refreshed:",
             len(self.documents),
-            "documents"
+            "chunks"
         )

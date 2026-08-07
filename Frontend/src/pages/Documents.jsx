@@ -7,6 +7,7 @@ import {
   Loader2,
   CheckCircle,
   AlertCircle,
+  Trash2,
 } from "lucide-react";
 
 function Documents() {
@@ -15,6 +16,8 @@ function Documents() {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const [uploading, setUploading] = useState(false);
+
+  const [deleting, setDeleting] = useState("");
 
   const [message, setMessage] = useState("");
 
@@ -28,9 +31,7 @@ function Documents() {
     try {
       const response = await fetch("http://127.0.0.1:5000/documents");
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch documents");
-      }
+      if (!response.ok) throw new Error("Failed to fetch documents");
 
       const data = await response.json();
 
@@ -98,13 +99,14 @@ function Documents() {
 
       const response = await fetch("http://127.0.0.1:5000/upload", {
         method: "POST",
+
         body: formData,
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Upload failed.");
+        throw new Error(data.error || "Upload failed");
       }
 
       setMessage(
@@ -113,36 +115,66 @@ function Documents() {
 
       setSelectedFile(null);
 
-      // Refresh document list
+      await fetchDocuments();
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setUploading(false);
+    }
+  }
+
+  // =========================
+  // Delete Document
+  // =========================
+
+  async function handleDelete(name) {
+    const confirmDelete = window.confirm(`Delete ${name}?`);
+
+    if (!confirmDelete) return;
+
+    setDeleting(name);
+
+    setMessage("");
+
+    setError("");
+
+    try {
+      const response = await fetch(`http://127.0.0.1:5000/documents/${name}`, {
+        method: "DELETE",
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Delete failed");
+      }
+
+      setMessage(`${name} deleted successfully`);
 
       await fetchDocuments();
     } catch (error) {
-      console.log(error);
-
-      setError(error.message || "Something went wrong while uploading.");
+      setError(error.message);
     } finally {
-      setUploading(false);
+      setDeleting("");
     }
   }
 
   return (
     <div
       className="
-        max-w-6xl
-        mx-auto
-        space-y-8
+      max-w-6xl
+      mx-auto
+      space-y-8
       "
     >
-      {/* =========================
-          Header
-      ========================= */}
+      {/* HEADER */}
 
       <div>
         <h1
           className="
-            text-3xl
-            font-bold
-            text-stone-800
+          text-3xl
+          font-bold
+          text-stone-800
           "
         >
           Documents
@@ -150,57 +182,49 @@ function Documents() {
 
         <p
           className="
-            mt-2
-            text-stone-500
+          mt-2
+          text-stone-500
           "
         >
           Upload and manage documents indexed by Persona RAG.
         </p>
       </div>
 
-      {/* =========================
-          Upload Section
-      ========================= */}
+      {/* UPLOAD CARD */}
 
       <div
         className="
-          bg-white
-          border
-          border-stone-200
-          rounded-3xl
-          p-6
-          shadow-sm
+        bg-white
+        border
+        border-stone-200
+        rounded-3xl
+        p-6
+        shadow-sm
         "
       >
         <div
           className="
-            flex
-            items-center
-            gap-3
-            mb-6
+          flex
+          items-center
+          gap-3
+          mb-6
           "
         >
           <div
             className="
-              p-3
-              rounded-xl
-              bg-amber-100
+            p-3
+            rounded-xl
+            bg-amber-100
             "
           >
-            <Upload
-              size={22}
-              className="
-                text-amber-700
-              "
-            />
+            <Upload size={22} className="text-amber-700" />
           </div>
 
           <div>
             <h2
               className="
-                text-xl
-                font-semibold
-                text-stone-800
+              text-xl
+              font-semibold
               "
             >
               Upload Document
@@ -208,35 +232,32 @@ function Documents() {
 
             <p
               className="
-                text-sm
-                text-stone-500
+              text-sm
+              text-stone-500
               "
             >
-              Add a PDF to the RAG knowledge base.
+              Add a PDF to knowledge base.
             </p>
           </div>
         </div>
 
-        {/* File Picker */}
-
         <label
           className="
-            block
-            border-2
-            border-dashed
-            border-stone-300
-            rounded-2xl
-            p-8
-            text-center
-            cursor-pointer
-            hover:border-amber-500
-            hover:bg-amber-50/40
-            transition
+          block
+          border-2
+          border-dashed
+          border-stone-300
+          rounded-2xl
+          p-8
+          text-center
+          cursor-pointer
+          hover:border-amber-500
+          transition
           "
         >
           <input
             type="file"
-            accept=".pdf,application/pdf"
+            accept=".pdf"
             onChange={handleFileChange}
             className="hidden"
           />
@@ -244,88 +265,40 @@ function Documents() {
           <FileText
             size={42}
             className="
-              mx-auto
-              text-stone-400
-              mb-3
+            mx-auto
+            text-stone-400
+            mb-3
             "
           />
 
           {selectedFile ? (
-            <>
-              <p
-                className="
-                  font-medium
-                  text-stone-800
-                "
-              >
-                {selectedFile.name}
-              </p>
-
-              <p
-                className="
-                  text-sm
-                  text-stone-500
-                  mt-1
-                "
-              >
-                Ready to upload
-              </p>
-            </>
+            <p className="font-medium">{selectedFile.name}</p>
           ) : (
-            <>
-              <p
-                className="
-                  font-medium
-                  text-stone-700
-                "
-              >
-                Choose a PDF file
-              </p>
-
-              <p
-                className="
-                  text-sm
-                  text-stone-400
-                  mt-1
-                "
-              >
-                PDF documents only
-              </p>
-            </>
+            <p>Choose PDF file</p>
           )}
         </label>
-
-        {/* Upload Button */}
 
         <button
           onClick={handleUpload}
           disabled={!selectedFile || uploading}
           className="
-            mt-5
-            px-6
-            py-3
-            rounded-xl
-            bg-amber-600
-            hover:bg-amber-700
-            disabled:bg-stone-300
-            disabled:cursor-not-allowed
-            text-white
-            font-medium
-            flex
-            items-center
-            gap-3
-            transition
+          mt-5
+          px-6
+          py-3
+          rounded-xl
+          bg-amber-600
+          hover:bg-amber-700
+          disabled:bg-stone-300
+          text-white
+          flex
+          gap-3
+          items-center
           "
         >
           {uploading ? (
             <>
-              <Loader2
-                size={18}
-                className="
-                  animate-spin
-                "
-              />
-              Indexing Document...
+              <Loader2 size={18} className="animate-spin" />
+              Indexing...
             </>
           ) : (
             <>
@@ -335,238 +308,155 @@ function Documents() {
           )}
         </button>
 
-        {/* Success */}
-
         {message && (
           <div
             className="
-              mt-5
-              flex
-              items-start
-              gap-3
-              rounded-xl
-              bg-green-50
-              border
-              border-green-200
-              p-4
-              text-green-700
-              text-sm
-            "
+          mt-5
+          bg-green-50
+          text-green-700
+          p-4
+          rounded-xl
+          flex
+          gap-2
+          "
           >
-            <CheckCircle
-              size={20}
-              className="
-                shrink-0
-              "
-            />
+            <CheckCircle size={20} />
 
-            <span>{message}</span>
+            {message}
           </div>
         )}
-
-        {/* Error */}
 
         {error && (
           <div
             className="
-              mt-5
-              flex
-              items-start
-              gap-3
-              rounded-xl
-              bg-red-50
-              border
-              border-red-200
-              p-4
-              text-red-700
-              text-sm
-            "
+          mt-5
+          bg-red-50
+          text-red-700
+          p-4
+          rounded-xl
+          flex
+          gap-2
+          "
           >
-            <AlertCircle
-              size={20}
-              className="
-                shrink-0
-              "
-            />
+            <AlertCircle size={20} />
 
-            <span>{error}</span>
+            {error}
           </div>
         )}
       </div>
 
-      {/* =========================
-          Documents
-      ========================= */}
+      {/* DOCUMENT CARDS */}
 
       <div>
         <div
           className="
-            flex
-            items-center
-            justify-between
-            mb-5
-          "
+        flex
+        justify-between
+        mb-5
+        "
         >
-          <div>
-            <h2
-              className="
-                text-xl
-                font-bold
-                text-stone-800
-              "
-            >
-              Indexed Documents
-            </h2>
-
-            <p
-              className="
-                text-sm
-                text-stone-500
-                mt-1
-              "
-            >
-              Documents currently available to the RAG system.
-            </p>
-          </div>
+          <h2
+            className="
+          text-xl
+          font-bold
+          "
+          >
+            Indexed Documents
+          </h2>
 
           <span
             className="
-              px-3
-              py-1
-              rounded-full
-              bg-stone-100
-              text-stone-600
-              text-sm
-            "
+          bg-stone-100
+          px-3
+          py-1
+          rounded-full
+          text-sm
+          "
           >
-            {documents.length} documents
+            {documents.length}
           </span>
         </div>
 
-        {documents.length === 0 ? (
-          <div
-            className="
-              bg-white
-              border
-              border-stone-200
-              rounded-3xl
-              p-10
-              text-center
-            "
-          >
-            <FileText
-              size={42}
+        <div
+          className="
+        grid
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-5
+        "
+        >
+          {documents.map((doc) => (
+            <div
+              key={doc.name}
               className="
-                mx-auto
-                text-stone-300
-                mb-3
-              "
-            />
-
-            <p
-              className="
-                text-stone-600
-                font-medium
-              "
+          bg-white
+          border
+          border-stone-200
+          rounded-3xl
+          p-6
+          shadow-sm
+          "
             >
-              No documents indexed yet.
-            </p>
-
-            <p
-              className="
-                text-stone-400
-                text-sm
-                mt-1
-              "
-            >
-              Upload a PDF to get started.
-            </p>
-          </div>
-        ) : (
-          <div
-            className="
-              grid
-              sm:grid-cols-2
-              lg:grid-cols-3
-              gap-5
-            "
-          >
-            {documents.map((doc, index) => (
               <div
-                key={index}
                 className="
-                      bg-white
-                      border
-                      border-stone-200
-                      rounded-3xl
-                      p-6
-                      shadow-sm
-                    "
+            flex
+            justify-between
+            "
               >
                 <div
                   className="
-                        flex
-                        items-start
-                        justify-between
-                      "
+              p-3
+              rounded-xl
+              bg-amber-100
+              "
                 >
-                  <div
-                    className="
-                          p-3
-                          rounded-xl
-                          bg-amber-100
-                        "
-                  >
-                    <FileText
-                      className="
-                            text-amber-700
-                          "
-                    />
-                  </div>
-
-                  <span
-                    className="
-                          px-2.5
-                          py-1
-                          rounded-full
-                          bg-green-50
-                          text-green-700
-                          text-xs
-                          font-medium
-                        "
-                  >
-                    {doc.status}
-                  </span>
+                  <FileText className="text-amber-700" />
                 </div>
 
-                <h3
+                <button
+                  onClick={() => handleDelete(doc.name)}
+                  disabled={deleting === doc.name}
                   className="
-                        mt-5
-                        font-semibold
-                        text-stone-800
-                        break-words
-                      "
+              p-2
+              rounded-xl
+              bg-red-50
+              text-red-600
+              hover:bg-red-100
+              "
                 >
-                  {doc.name}
-                </h3>
-
-                <div
-                  className="
-                        mt-4
-                        flex
-                        items-center
-                        gap-2
-                        text-sm
-                        text-stone-500
-                      "
-                >
-                  <Database size={17} />
-                  {doc.chunks} chunks
-                </div>
+                  {deleting === doc.name ? (
+                    <Loader2 size={18} className="animate-spin" />
+                  ) : (
+                    <Trash2 size={18} />
+                  )}
+                </button>
               </div>
-            ))}
-          </div>
-        )}
+
+              <h3
+                className="
+            mt-5
+            font-semibold
+            break-words
+            "
+              >
+                {doc.name}
+              </h3>
+
+              <div
+                className="
+            mt-4
+            flex
+            gap-2
+            text-sm
+            text-stone-500
+            "
+              >
+                <Database size={17} />
+                {doc.chunks} chunks
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

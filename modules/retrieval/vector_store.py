@@ -122,31 +122,42 @@ class VectorStore:
 
     def load(self):
 
-
+        if not os.path.exists(self.index_path):
+        
+            print(
+                "Vector store not found. Starting empty."
+            )
+    
+            return (
+                None,
+                np.array([]),
+                []
+            )
+    
+    
         print(
             "Loading FAISS index..."
         )
-
-
+    
+    
         index = faiss.read_index(
             self.index_path
         )
-
-
+    
+    
         embeddings = np.load(
             self.embeddings_path
         )
-
-
+    
+    
         with open(
             self.chunks_path,
             "rb"
         ) as f:
-
+    
             chunks = pickle.load(f)
-
-
-
+    
+    
         print(
             "Loaded:",
             index.ntotal,
@@ -154,14 +165,14 @@ class VectorStore:
             len(chunks),
             "chunks"
         )
-
-
+    
+    
         return (
             index,
             embeddings,
             chunks
         )
-
+    
 
 
     # -----------------------------
@@ -175,15 +186,57 @@ class VectorStore:
     ):
 
 
-        # Load existing data
+        # -----------------------------
+        # FIRST DOCUMENT
+        # -----------------------------
+
+        if not os.path.exists(self.index_path):
+
+
+            print(
+                "Creating first vector store..."
+            )
+
+
+            index = self.create_index(
+                new_embeddings
+            )
+
+
+            self.save(
+                index,
+                new_embeddings,
+                new_chunks
+            )
+
+
+            return index
+
+
+
+        # -----------------------------
+        # EXISTING STORE
+        # -----------------------------
+
 
         index, embeddings, chunks = self.load()
 
 
 
-        # -------------------------
-        # Add vectors to FAISS
-        # -------------------------
+        print(
+            "Existing chunks:",
+            len(chunks)
+        )
+
+
+        print(
+            "Adding new chunks:",
+            len(new_chunks)
+        )
+
+
+
+        # Add vectors
 
         index.add(
             new_embeddings
@@ -191,9 +244,7 @@ class VectorStore:
 
 
 
-        # -------------------------
-        # Update embeddings.npy
-        # -------------------------
+        # Merge embeddings
 
         updated_embeddings = np.vstack(
             [
@@ -204,44 +255,19 @@ class VectorStore:
 
 
 
-        np.save(
-            self.embeddings_path,
-            updated_embeddings
-        )
-
-
-
-        # -------------------------
-        # Update chunks.pkl
-        # -------------------------
+        # Merge metadata
 
         chunks.extend(
             new_chunks
         )
 
 
-        with open(
-            self.chunks_path,
-            "wb"
-        ) as f:
 
-
-            pickle.dump(
-                chunks,
-                f
-            )
-
-
-
-        # -------------------------
-        # Save FAISS index
-        # -------------------------
-
-        faiss.write_index(
+        self.save(
             index,
-            self.index_path
+            updated_embeddings,
+            chunks
         )
-
 
 
         print(
@@ -255,5 +281,68 @@ class VectorStore:
         )
 
 
-
         return index
+
+    def remove_document(self,document_name):
+
+        index, embeddings, chunks = self.load()
+
+
+        filtered_chunks = []
+        filtered_embeddings = []
+
+
+
+        for emb, chunk in zip(
+            embeddings,
+            chunks
+        ):
+
+
+            if chunk["metadata"].get("document") != document_name:
+
+                filtered_chunks.append(
+                    chunk
+                )
+
+                filtered_embeddings.append(
+                    emb
+                )
+
+
+
+        if len(filtered_chunks)==0:
+
+            print(
+                "No vectors remaining"
+            )
+
+            return
+
+
+
+        filtered_embeddings = np.array(
+            filtered_embeddings
+        ).astype(
+            "float32"
+        )
+
+
+
+        new_index = self.create_index(
+            filtered_embeddings
+        )
+
+
+
+        self.save(
+            new_index,
+            filtered_embeddings,
+            filtered_chunks
+        )
+
+
+        print(
+            "Vector cleanup completed:",
+            document_name
+        )
