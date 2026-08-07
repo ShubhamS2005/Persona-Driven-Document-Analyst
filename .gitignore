@@ -2,3 +2,14 @@
 modules/prompting/__pycache__/
 /Legacy/venv
 .env 
+venv/
+.env
+__pycache__/
+*.pyc
+
+data/uploads/
+data/vector_store/
+
+node_modules/
+
+dist/

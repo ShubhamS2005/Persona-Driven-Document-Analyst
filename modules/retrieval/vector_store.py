@@ -163,7 +163,7 @@ class VectorStore:
             index.ntotal,
             "vectors and",
             len(chunks),
-            "chunks"
+            
         )
     
     

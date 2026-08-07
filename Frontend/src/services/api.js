@@ -13,3 +13,16 @@ export async function askAssistant(query) {
 
   return response.json();
 }
+export async function getDocuments(){
+
+    const response = await fetch(
+        "http://localhost:5000/documents"
+    );
+
+
+    const data = await response.json();
+
+
+    return data.documents || data;
+
+}

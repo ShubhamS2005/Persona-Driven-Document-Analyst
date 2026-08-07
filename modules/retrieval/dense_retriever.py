@@ -61,11 +61,7 @@ class DenseRetriever:
         self.load_store()
 
 
-        print(
-            "Dense Retriever refreshed:",
-            len(self.chunks),
-            "chunks"
-        )
+        
 
 
 

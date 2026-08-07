@@ -1,254 +1,330 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   Brain,
   FileText,
   Database,
-  MessageSquare,
-  ArrowRight,
+  Search,
+  ShieldCheck,
+  UploadCloud,
 } from "lucide-react";
 
+import { getDocuments } from "../services/api.js";
+
 function Dashboard() {
+  const [documents, setDocuments] = useState([]);
+
+  const [stats, setStats] = useState({
+    documents: 0,
+    chunks: 0,
+  });
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const response = await getDocuments();
+
+        const docs = Array.isArray(response) ? response : [];
+
+        setDocuments(docs);
+
+        setStats({
+          documents: docs.length,
+
+          chunks: docs.reduce((sum, doc) => sum + Number(doc.chunks || 0), 0),
+        });
+      } catch (error) {
+        console.error("Dashboard error", error);
+      }
+    }
+
+    load();
+  }, []);
+
   return (
     <div className="space-y-8">
-
-      {/* Hero */}
+      {/* HERO */}
 
       <section
         className="
-          rounded-3xl
-          bg-gradient-to-r
-          from-amber-100
-          via-orange-50
-          to-stone-100
-
-          p-10
-
-          border
-          border-amber-200
-        "
+rounded-3xl
+bg-gradient-to-r
+from-amber-100
+via-orange-50
+to-stone-100
+border
+border-amber-200
+p-10
+"
       >
-
         <div className="flex justify-between items-center flex-wrap gap-8">
-
           <div>
-
-            <h1 className="text-4xl font-bold text-stone-900">
+            <h1
+              className="
+text-4xl
+font-bold
+text-stone-900
+"
+            >
               Persona RAG
             </h1>
 
-            <p className="mt-3 text-stone-700 max-w-2xl">
-
-              AI-powered document intelligence with
-              Persona Detection, Hybrid Retrieval,
-              Context Building and LLM generation.
-
+            <p
+              className="
+mt-3
+max-w-2xl
+text-stone-700
+"
+            >
+              Document intelligence system combining PDF understanding, hybrid
+              retrieval, dynamic persona detection and grounded AI generation.
             </p>
 
+            <div
+              className="
+mt-5
+flex
+gap-3
+flex-wrap
+"
+            >
+              <Badge text="Hybrid Retrieval" />
+
+              <Badge text="FAISS Vector Search" />
+
+              <Badge text="Grounded LLM" />
+            </div>
           </div>
 
           <div
             className="
-              w-24
-              h-24
-
-              rounded-3xl
-
-              bg-white
-
-              flex
-              items-center
-              justify-center
-
-              shadow-lg
-            "
+w-28
+h-28
+rounded-3xl
+bg-white
+flex
+items-center
+justify-center
+shadow-lg
+"
           >
-
-            <Brain
-              size={48}
-              className="text-amber-600"
-            />
-
+            <Brain size={55} className="text-amber-600" />
           </div>
-
         </div>
-
       </section>
 
-      {/* Stats */}
+      {/* STATS */}
 
       <div
         className="
-          grid
-          gap-6
-
-          md:grid-cols-2
-          xl:grid-cols-4
-        "
+grid
+md:grid-cols-2
+xl:grid-cols-4
+gap-6
+"
       >
+        <StatCard title="Documents" value={stats.documents} icon={FileText} />
 
-        <StatCard
-          title="Indexed Documents"
-          value="9"
-          icon={FileText}
-        />
+        <StatCard title="Indexed Chunks" value={stats.chunks} icon={Database} />
 
-        <StatCard
-          title="Document Chunks"
-          value="107"
-          icon={Database}
-        />
+        <StatCard title="Retriever" value="Hybrid" icon={Search} />
 
-        <StatCard
-          title="Retriever"
-          value="Hybrid"
-          icon={Brain}
-        />
-
-        <StatCard
-          title="API"
-          value="Running"
-          icon={MessageSquare}
-        />
-
+        <StatCard title="Generation" value="Grounded" icon={ShieldCheck} />
       </div>
-
-      {/* Features */}
 
       <div
         className="
-          grid
-          lg:grid-cols-2
-          gap-6
-        "
+grid
+lg:grid-cols-2
+gap-6
+"
       >
+        {/* DOCUMENTS */}
 
-        <Feature
-          title="Hybrid Retrieval"
+        <div
+          className="
+bg-white
+border
+rounded-2xl
+p-6
+shadow-sm
+"
+        >
+          <h2 className="text-xl font-semibold">Latest Documents</h2>
 
-          text="
-Dense embeddings and BM25
-work together to retrieve
-highly relevant document chunks."
+          <div className="mt-5 space-y-3">
+            {documents.length === 0 ? (
+              <div
+                className="
+text-stone-500
+flex
+gap-2
+"
+              >
+                <UploadCloud size={20} />
+                No documents uploaded
+              </div>
+            ) : (
+              documents.slice(0, 5).map((doc, index) => (
+                <div
+                  key={index}
+                  className="
+border
+rounded-xl
+p-4
+"
+                >
+                  <h3
+                    className="
+font-medium
+text-stone-900
+"
+                  >
+                    {doc.name}
+                  </h3>
 
-        />
+                  <p className="text-sm text-stone-600 mt-1">
+                    Chunks:
+                    {doc.chunks}
+                  </p>
 
-        <Feature
-          title="Persona Detection"
+                  <p className="text-sm text-amber-600 mt-1">
+                    Persona:
+                    {doc.persona?.persona || "Generated dynamically"}
+                  </p>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
 
-          text="
-Automatically detects the user's
-intent and generates answers in
-an appropriate style."
+        {/* RETRIEVAL */}
 
-        />
+        <div
+          className="
+bg-white
+border
+rounded-2xl
+p-6
+shadow-sm
+"
+        >
+          <h2 className="text-xl font-semibold">System Capabilities</h2>
 
-        <Feature
-          title="Grounded Responses"
+          <div
+            className="
+mt-5
+space-y-3
+text-stone-600
+"
+          >
+            <p>✓ Semantic Embedding Retrieval</p>
 
-          text="
-Answers are generated only from
-retrieved document evidence,
-reducing hallucinations."
+            <p>✓ BM25 Keyword Retrieval</p>
 
-        />
+            <p>✓ Hybrid Score Fusion</p>
 
-        <Feature
-          title="Source Attribution"
+            <p>✓ Document Metadata Tracking</p>
 
-          text="
-Every answer contains the
-document, section and pages
-used for generation."
+            <p>✓ Persona Based Response Style</p>
 
-        />
-
+            <p>✓ Source Grounded Answers</p>
+          </div>
+        </div>
       </div>
 
+      <div
+        className="
+grid
+lg:grid-cols-2
+gap-6
+"
+      >
+        <Feature
+          title="Document Intelligence"
+          text="PDF extraction, cleaning, semantic chunking and metadata enrichment create searchable document knowledge."
+        />
+
+        <Feature
+          title="Persona Engine"
+          text="The system dynamically adapts response style according to query intent and document context."
+        />
+
+        <Feature
+          title="Retrieval Pipeline"
+          text="Dense embeddings and BM25 retrieval work together to improve relevant context selection."
+        />
+
+        <Feature
+          title="Safety Layer"
+          text="Responses are generated only from retrieved evidence to reduce hallucination."
+        />
+      </div>
     </div>
   );
 }
 
-function StatCard({
-  title,
-  value,
-  icon: Icon,
-}) {
+function StatCard({ title, value, icon: Icon }) {
   return (
-
     <div
       className="
-        bg-white
-
-        rounded-2xl
-
-        border
-        border-stone-200
-
-        p-6
-
-        shadow-sm
-      "
+bg-white
+border
+rounded-2xl
+p-6
+shadow-sm
+"
     >
+      <Icon size={30} className="text-amber-600" />
 
-      <div className="flex justify-between items-center">
+      <p className="mt-5 text-sm text-stone-500">{title}</p>
 
-        <Icon
-          className="text-amber-600"
-          size={28}
-        />
-
-        <ArrowRight
-          size={18}
-          className="text-stone-400"
-        />
-
-      </div>
-
-      <h3 className="mt-6 text-sm text-stone-500">
-        {title}
-      </h3>
-
-      <p className="text-3xl font-bold mt-2 text-stone-900">
-        {value}
-      </p>
-
+      <h2 className="text-3xl font-bold mt-2">{value}</h2>
     </div>
-
   );
 }
 
-function Feature({
-  title,
-  text,
-}) {
+function Feature({ title, text }) {
   return (
-
     <div
       className="
-        bg-white
-
-        rounded-2xl
-
-        border
-        border-stone-200
-
-        p-6
-
-        shadow-sm
-      "
+bg-white
+border
+rounded-2xl
+p-6
+shadow-sm
+"
     >
+      <h2 className="text-xl font-semibold">{title}</h2>
 
-      <h2 className="font-semibold text-xl text-stone-900">
-        {title}
-      </h2>
-
-      <p className="mt-3 text-stone-600 leading-7">
+      <p
+        className="
+mt-3
+text-stone-600
+leading-7
+"
+      >
         {text}
       </p>
-
     </div>
+  );
+}
 
+function Badge({ text }) {
+  return (
+    <span
+      className="
+px-3
+py-1
+rounded-full
+bg-white
+border
+text-sm
+text-stone-700
+"
+    >
+      {text}
+    </span>
   );
 }
 

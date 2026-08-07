@@ -81,11 +81,7 @@ class HybridRetriever:
         )
 
 
-        print(
-            "BM25 initialized:",
-            len(self.documents),
-            "chunks"
-        )
+        
 
 
 
@@ -363,5 +359,4 @@ class HybridRetriever:
         print(
             "Hybrid Retriever refreshed:",
             len(self.documents),
-            "chunks"
         )
