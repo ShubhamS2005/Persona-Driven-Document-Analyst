@@ -237,10 +237,11 @@ shadow-sm
               />
             </div>
 
-            <p className="mt-2 font-semibold text-green-700">Operational</p>
+            <p className="mt-2 font-semibold text-green-700">Demo Mode:</p>
 
             <p className="mt-1 text-xs text-stone-500">
-              Connected to Flask API
+              This deployment contains curated documents.
+Ask questions about the available knowledge base.
             </p>
           </div>
         </div>

@@ -10,8 +10,21 @@ app = Flask(__name__)
 CORS(app)
 
 upload_bp = Blueprint("upload",__name__)
-UPLOAD_FOLDER="data/uploads"
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+UPLOAD_FOLDER = os.path.join(
+    BASE_DIR,
+    "data",
+    "uploads"
+)
+PDF_FOLDER = os.path.join(
+    BASE_DIR,
+    "data",
+    "input_pdfs"
+)
+
+DEMO_MODE=False
 
 print("Starting RAG API...")
 retriever = Retriever()
@@ -106,13 +119,19 @@ def upload():
     if not file.filename.lower().endswith(".pdf"):
         return {"error": "Only PDF files are supported"}, 400
 
-    path = os.path.join("data/input_pdfs",file.filename)
+    path = os.path.join(PDF_FOLDER,file.filename)
 
     file.save(path)
 
     result = ingestion.ingest_pdf(path)
     document_manager.add(result["document"],result["chunks"],result.get("persona"))
     retriever.refresh()
+
+    if DEMO_MODE:
+        return jsonify({
+            "error":
+            "Upload disabled in demo mode. Using curated documents."
+        }),403
 
 
     return {
@@ -167,14 +186,8 @@ def delete_document(name):
     return jsonify({"message":"Document deleted successfully"})
 
 if __name__ == "__main__":
-
-
+    port = int(os.environ.get("PORT", 5000))
     app.run(
-
         host="0.0.0.0",
-
-        port=5000,
-
-        debug=True
-
+        port=port
     )
