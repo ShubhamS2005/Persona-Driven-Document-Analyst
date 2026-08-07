@@ -14,10 +14,24 @@ retriever = Retriever(
     demo=True
 )
 
+import os
 
-pipeline = FullRAGPipeline(
-    retriever=retriever
-)
+pipeline = None
+
+
+def get_pipeline():
+
+    global pipeline
+
+    if pipeline is None:
+
+        retriever = Retriever()
+
+        pipeline = FullRAGPipeline(
+            retriever=retriever
+        )
+
+    return pipeline
 
 
 
@@ -39,7 +53,9 @@ def ask():
     query=data["query"]
 
 
-    result=pipeline.run(query)
+    rag_pipeline = get_pipeline()
+
+    result = rag_pipeline.run(query)
 
 
     return jsonify({
@@ -63,5 +79,5 @@ if __name__=="__main__":
 
     app.run(
         host="0.0.0.0",
-        port=5000
+        port=int(os.environ.get("PORT",5000))
     )
