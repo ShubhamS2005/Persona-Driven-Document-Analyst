@@ -49,6 +49,34 @@ def health():
         "mode":"demo"
     })
 
+@app.route("/")
+def home():
+
+    return jsonify({
+        "status":"running",
+        "mode":"demo",
+        "info":"ask questions from uploaded docs"
+    })
+
+@app.route("/documents", methods=["GET"])
+def get_documents():
+
+    return jsonify({
+        "documents": [
+            {
+                "name": "Resume.pdf",
+                "mode": "demo"
+            },
+            {
+                "name": "Dishes.pdf",
+                "mode": "demo"
+            },
+            {
+                "name": "Cities_South.pdf",
+                "mode": "demo"
+            }
+        ]
+    })
 
 
 @app.route("/ask", methods=["POST"])

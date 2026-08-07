@@ -29,6 +29,8 @@ function AskAssistant() {
     setQuery("");
 
     setLoading(true);
+    const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
 
     try {
       const response = await fetch("http://127.0.0.1:5000/ask", {
