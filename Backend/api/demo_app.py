@@ -1,20 +1,12 @@
-from flask import Flask,request,jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-
-from modules.pipeline.full_pipeline import FullRAGPipeline
-from modules.retrieval.retriever import Retriever
+import os
 
 
 app = Flask(__name__)
 
 CORS(app)
 
-
-retriever = Retriever(
-    demo=True
-)
-
-import os
 
 pipeline = None
 
@@ -25,11 +17,25 @@ def get_pipeline():
 
     if pipeline is None:
 
-        retriever = Retriever()
+        print("Loading RAG pipeline...")
+
+
+        from modules.pipeline.full_pipeline import FullRAGPipeline
+        from modules.retrieval.retriever import Retriever
+
+
+        retriever = Retriever(
+            demo=True
+        )
+
 
         pipeline = FullRAGPipeline(
             retriever=retriever
         )
+
+
+        print("Pipeline ready")
+
 
     return pipeline
 
@@ -38,24 +44,25 @@ def get_pipeline():
 @app.route("/health")
 def health():
 
-    return {
+    return jsonify({
         "status":"running",
         "mode":"demo"
-    }
+    })
 
 
 
-@app.route("/ask",methods=["POST"])
+@app.route("/ask", methods=["POST"])
 def ask():
 
     data=request.json
 
-    query=data["query"]
+    query=data.get("query")
 
 
-    rag_pipeline = get_pipeline()
+    rag_pipeline=get_pipeline()
 
-    result = rag_pipeline.run(query)
+
+    result=rag_pipeline.run(query)
 
 
     return jsonify({
@@ -66,7 +73,7 @@ def ask():
 
         "sources":[
             {
-             "document":c["metadata"]["document"]
+                "document":c["metadata"]["document"]
             }
             for c in result["retrieved"]
         ]
