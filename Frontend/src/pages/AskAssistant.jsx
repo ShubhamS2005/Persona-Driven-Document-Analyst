@@ -4,6 +4,7 @@ import { Send, Brain, Loader2, User, FileText } from "lucide-react";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import logo from "../assets/logo.png";
 
 function AskAssistant() {
   const [query, setQuery] = useState("");
@@ -118,7 +119,14 @@ rounded-2xl
 bg-amber-100
 "
           >
-            <Brain size={28} className="text-amber-700" />
+            <img
+              src={logo}
+              className="
+ w-16
+ h-16
+ object-contain
+ "
+            />
           </div>
 
           <div>
@@ -268,8 +276,6 @@ text-stone-800
                       >
                         {msg.persona?.name || "Persona RAG"}
                       </h3>
-
-                     
                     </div>
                   </div>
                 </div>

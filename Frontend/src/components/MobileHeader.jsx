@@ -3,6 +3,7 @@ import React from "react";
 import { Menu, Brain, UserCircle2 } from "lucide-react";
 
 import { useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const pageTitles = {
   "/dashboard": "Dashboard",
@@ -76,7 +77,7 @@ function MobileHeader({ onMenu }) {
               border-amber-200
             "
           >
-            <Brain size={20} className="text-amber-700" />
+            <img src={logo} className="w-6 h-6 object-contain" />
           </div>
 
           <div>

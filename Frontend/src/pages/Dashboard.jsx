@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import { getDocuments } from "../services/api.js";
+import logo from "../assets/logo.png";
 
 function Dashboard() {
   const [documents, setDocuments] = useState([]);
@@ -108,7 +109,14 @@ justify-center
 shadow-lg
 "
           >
-            <Brain size={55} className="text-amber-600" />
+            <img
+              src={logo}
+              className="
+ w-16
+ h-16
+ object-contain
+ "
+            />
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { NavLink } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 import {
   LayoutDashboard,
   MessageSquare,
@@ -131,7 +131,26 @@ function Sidebar({ isOpen, onClose }) {
                   border-amber-200
                 "
               >
-                <Brain size={28} className="text-amber-700" />
+                <div
+                  className="
+w-12
+h-12
+rounded-xl
+bg-white
+border
+border-amber-200
+flex
+items-center
+justify-center
+shadow-sm
+"
+                >
+                  <img
+                    src={logo}
+                    className="w-9 h-9 object-contain"
+                    alt="Persona RAG"
+                  />
+                </div>
               </div>
 
               <div>
