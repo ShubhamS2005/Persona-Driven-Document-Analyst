@@ -35,12 +35,7 @@ def keyword_match(text,keywords):
 
 
 def evaluate():
-
-
-
-    print(
-        "\nLoading retriever..."
-    )
+    print("\nLoading retriever...")
 
 
     hybrid = HybridRetriever()
@@ -74,14 +69,7 @@ def evaluate():
             "expected_keywords"
         ]
 
-
-
-        print(
-            "\nQUERY:",
-            query
-        )
-
-
+        print("\nQUERY:",query)
 
         results = hybrid.retrieve(
 

@@ -89,10 +89,7 @@ class FullRAGPipeline:
         )
 
 
-        print("\nPERSONA:")
-        print(
-            persona["persona"]
-        )
+        
 
 
 
