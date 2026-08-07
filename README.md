@@ -2,7 +2,7 @@
 ## AI-Powered Document Intelligence System with Hybrid Retrieval & Dynamic Persona Generation
 
 
-![Persona RAG Banner](docs/screenshots/demo3.png)
+![Persona RAG Banner](docs/screenshots/dashboard.png)
 
 
 <p align="center">
