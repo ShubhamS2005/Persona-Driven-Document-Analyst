@@ -203,7 +203,7 @@ Due to the resource requirements of document processing, embedding generation, a
 
 Demo deployment:
 
-Frontend: https://persona-driven-document-analyst.vercel.app/dashboard
+Frontend: https://persona-driven-document-analyst.vercel.app
 
 Backend API: https://persona-driven-document-analyst-3.onrender.com/
 
