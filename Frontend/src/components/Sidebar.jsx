@@ -241,7 +241,7 @@ shadow-sm
 
             <p className="mt-1 text-xs text-stone-500">
               This deployment contains curated documents.
-Ask questions about the available knowledge base.
+and it is in process.
             </p>
           </div>
         </div>
