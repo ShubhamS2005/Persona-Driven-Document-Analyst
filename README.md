@@ -172,6 +172,7 @@ Response characteristics:
 
 ---
 
+
 # 4. 🤖 Grounded AI Generation
 
 
@@ -190,6 +191,21 @@ Features:
 
 ✅ Document references
 
+# 🌐 Deployment
+
+## Demo Version
+
+A lightweight demo version of Persona RAG is deployed for demonstration purposes.
+
+The deployed application uses a curated document collection and allows users to query the indexed documents.
+
+Due to the resource requirements of document processing, embedding generation, and local AI models, the complete RAG pipeline is intended to run locally.
+
+Demo deployment:
+
+Frontend: https://persona-driven-document-analyst.vercel.app/dashboard
+
+Backend API: https://persona-driven-document-analyst-3.onrender.com/
 
 ### Generation Pipeline
 
@@ -287,6 +303,13 @@ Final Answer + Sources
 | Backend API | Flask REST API |
 | Frontend | React + Tailwind CSS |
 
+# 🎥 Demo
+
+
+Demo video:
+
+
+![Persona RAG Demo](docs/demo/demo.gif)
 
 ---
 
@@ -461,13 +484,7 @@ http://localhost:5173
 
 ---
 
-# 🎥 Demo
 
-
-Demo video:
-
-
-![Persona RAG Demo](docs/demo/demo.gif)
 
 
 
@@ -491,13 +508,13 @@ The demo shows:
 
 Planned features:
 
-- Cloud deployment
 - User authentication
 - Multiple LLM providers
 - Advanced evaluation metrics
 - Conversation memory
 - Document comparison mode
 - Multi-modal document support
+- Kubernetes based deployment
 
 
 ---
