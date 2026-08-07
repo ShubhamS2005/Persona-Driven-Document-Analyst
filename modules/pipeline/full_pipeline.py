@@ -6,7 +6,7 @@ from modules.persona.persona_detector import PersonaDetector
 from modules.prompting.prompt_builder import PromptBuilder
 
 from modules.llm.llm_client import LLMClient
-
+from modules.persona.persona import PersonaManager
 
 
 class FullRAGPipeline:
@@ -44,7 +44,7 @@ class FullRAGPipeline:
 
 
         self.persona_detector = PersonaDetector()
-
+        self.persona_manager = PersonaManager()
 
         self.context_builder = ContextBuilder()
 
@@ -73,22 +73,6 @@ class FullRAGPipeline:
 
 
         # ----------------------
-        # Persona Detection
-        # ----------------------
-
-        persona = self.persona_detector.detect(
-            query
-        )
-
-
-        print("\nPERSONA:")
-        print(
-            persona["persona"]
-        )
-
-
-
-        # ----------------------
         # Retrieval
         # ----------------------
 
@@ -98,9 +82,16 @@ class FullRAGPipeline:
         )
 
 
+        persona = self.persona_detector.detect(
+            query,
+            results
+
+        )
+
+
+        print("\nPERSONA:")
         print(
-            "\nRetrieved:",
-            len(results)
+            persona["persona"]
         )
 
 
@@ -117,7 +108,7 @@ class FullRAGPipeline:
 
 
         # ----------------------
-        # Prompt Creation
+        # Prompt
         # ----------------------
 
         prompt = self.prompt_builder.build(
@@ -133,7 +124,7 @@ class FullRAGPipeline:
 
 
         # ----------------------
-        # LLM Generation
+        # LLM
         # ----------------------
 
         answer = self.llm.generate(
@@ -141,19 +132,19 @@ class FullRAGPipeline:
         )
 
 
-
         return {
 
-            "query": query,
+            "query":query,
 
-            "retrieved": results,
+            "retrieved":results,
 
-            "persona": persona,
+            "persona":persona,
 
-            "context": context,
+            "context":context,
 
-            "prompt": prompt,
+            "prompt":prompt,
 
-            "answer": answer
+            "answer":answer
 
         }
+    

@@ -6,7 +6,7 @@ class ContextBuilder:
         max_sources=5
     ):
 
-        self.max_sources=max_sources
+        self.max_sources = max_sources
 
 
 
@@ -17,7 +17,7 @@ class ContextBuilder:
     ):
 
 
-        context=[]
+        context = []
 
 
 
@@ -31,15 +31,12 @@ class ContextBuilder:
 
             context.append(
 
-                f"""
-Role:
-{persona['persona']}
+f"""
+Detected Persona:
+{persona.get('persona','general assistant')}
 
-Answer Style:
-{persona['details']['style']}
-
-Focus Areas:
-{', '.join(persona['details']['focus'])}
+Confidence:
+{persona.get('confidence',0):.2f}
 
 """
             )
@@ -52,13 +49,16 @@ Focus Areas:
 
 
 
-        for idx,chunk in enumerate(
+        for idx, chunk in enumerate(
             retrieved_chunks[:self.max_sources],
             start=1
         ):
 
 
-            metadata=chunk["metadata"]
+            metadata = chunk.get(
+                "metadata",
+                {}
+            )
 
 
             source=f"""
@@ -66,10 +66,12 @@ Focus Areas:
 ===== SOURCE {idx} =====
 
 Document:
-{metadata.get('document')}
+{metadata.get('document','Unknown')}
+
 
 Section:
-{metadata.get('section_title')}
+{metadata.get('section_title','Unknown')}
+
 
 Pages:
 {metadata.get('page_start')}
@@ -77,16 +79,22 @@ Pages:
 {metadata.get('page_end')}
 
 
+Keywords:
+{', '.join(metadata.get('keywords',[]))}
+
+
+Entities:
+{', '.join(metadata.get('entities',[]))}
+
+
 Content:
 
-{chunk['text']}
+{chunk.get('text','')}
 
 """
 
 
-            context.append(
-                source
-            )
+            context.append(source)
 
 
 

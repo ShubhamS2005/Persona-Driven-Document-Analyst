@@ -1,45 +1,79 @@
-import json
-import os
-
-
-
 class PersonaManager:
 
 
-    def __init__(
+    def build_prompt_style(
         self,
-        path="modules/persona/personas.json"
+        persona
     ):
 
-        self.path=path
 
-        self.personas=self.load()
-
+        styles = {
 
 
-    def load(self):
+            "technical mentor":
 
-        with open(
-            self.path,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            return json.load(f)
+            """
+Answer with technical depth.
+Explain architecture,
+implementation details,
+tradeoffs and engineering decisions.
+""",
 
 
 
-    def get_persona(
-        self,
-        name
-    ):
+            "research analyst":
 
-        return self.personas.get(
-            name
+            """
+Answer with analytical reasoning,
+comparisons,
+methodology and evidence.
+""",
+
+
+
+            "career advisor":
+
+            """
+Answer with practical career guidance,
+resume improvement,
+skills and actionable suggestions.
+""",
+
+
+
+            "historical analyst":
+
+            """
+Answer with timeline,
+historical context,
+events and cultural explanation.
+""",
+
+
+
+            "travel advisor":
+
+            """
+Answer with practical recommendations,
+locations and planning advice.
+""",
+
+
+
+            "general assistant":
+
+            """
+Answer clearly and concisely.
+"""
+
+        }
+
+
+
+        return styles.get(
+
+            persona,
+
+            styles["general assistant"]
+
         )
-
-
-
-    def all_personas(self):
-
-        return self.personas

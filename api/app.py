@@ -111,7 +111,7 @@ def upload():
     file.save(path)
 
     result = ingestion.ingest_pdf(path)
-    document_manager.add(result["document"],result["chunks"])
+    document_manager.add(result["document"],result["chunks"],result.get("persona"))
     retriever.refresh()
 
 

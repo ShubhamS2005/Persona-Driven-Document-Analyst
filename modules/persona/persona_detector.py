@@ -1,8 +1,6 @@
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-from modules.persona.persona import PersonaManager
-
 
 
 class PersonaDetector:
@@ -10,182 +8,238 @@ class PersonaDetector:
 
     def __init__(self):
 
-        self.manager = PersonaManager()
-
-
         self.model = SentenceTransformer(
             "sentence-transformers/all-MiniLM-L6-v2"
         )
 
 
-        self.personas = (
-            self.manager.all_personas()
-        )
-
-
-        self.names=list(
-            self.personas.keys()
-        )
-
-
-        profiles=[]
-
-
-        for name in self.names:
-
-
-            data=self.personas[name]
-
-
-            text = (
-
-                data["description"]
-                +
-                " "
-                +
-                " ".join(
-                    data["keywords"]
-                )
-
-            )
-
-
-            profiles.append(text)
-
-
-
-        self.profile_embeddings = (
-            self.model.encode(
-                profiles
-            )
-        )
-
-
-
-    def keyword_score(
-        self,
-        query,
-        keywords
-    ):
-
-
-        query=query.lower()
-
-
-        matches=0
-
-
-        for word in keywords:
-
-
-            if word.lower() in query:
-
-                matches+=1
-
-
-
-        if len(keywords)==0:
-
-            return 0
-
-
-
-        return matches / len(keywords)
-
-
-
 
     def detect(
         self,
-        query
+        query,
+        retrieved_chunks,
+        document_persona=None
     ):
 
 
+        if not retrieved_chunks:
+
+            return {
+
+                "persona":
+                "general assistant",
+
+                "confidence":
+                0.0
+
+            }
+
+
+
+        context = " ".join(
+
+            [
+                chunk["text"]
+
+                for chunk in retrieved_chunks
+
+            ]
+
+        )
+
+
+
+        combined = f"""
+
+Question:
+
+{query}
+
+
+Document evidence:
+
+{context}
+
+"""
+
+
+
         query_embedding = self.model.encode(
-            [query]
+            combined,
+            normalize_embeddings=True
         )
 
 
 
-        semantic_scores = cosine_similarity(
-
-            query_embedding,
-
-            self.profile_embeddings
-
-        )[0]
+        confidence = 0.5
 
 
 
-        final_scores=[]
+        # Compare with uploaded document identity
+
+        if document_persona and document_persona.get("embedding"):
 
 
-        for idx,name in enumerate(self.names):
-
-
-            keyword=self.keyword_score(
-
-                query,
-
-                self.personas[name]["keywords"]
-
+            persona_embedding = (
+                document_persona["embedding"]
             )
 
 
-            score=(
+            similarity = cosine_similarity(
 
-                0.6 * semantic_scores[idx]
+                [
+                    query_embedding
+                ],
 
-                +
+                [
+                    persona_embedding
+                ]
 
-                0.4 * keyword
-
-            )
-
-
-            final_scores.append(score)
-
+            )[0][0]
 
 
+            confidence = float(similarity)
 
-        best_index=max(
-            range(len(final_scores)),
-            key=lambda i: final_scores[i]
+
+
+        persona = self.classify(
+
+            query,
+
+            context
+
         )
 
-
-        persona=self.names[
-            best_index
-        ]
-
-
-        confidence = float(
-    final_scores[best_index]
-)
 
 
         return {
 
-    "persona": persona,
 
-    "confidence": float(confidence),
-
-    "similarity_score": float(confidence),
+            "persona":
+            persona,
 
 
-    "details":
-    self.personas[persona].get(
-        "details",
-        {}
-    ),
+            "confidence":
+            confidence
 
 
-    "all_scores":
-    {
-        name: float(score)
-        for name, score in zip(
-            self.names,
-            final_scores
-        )
-    }
-}
+        }
+
+
+
+    def classify(
+        self,
+        query,
+        context
+    ):
+
+
+        text = (
+
+            query
+            +
+            " "
+            +
+            context
+
+        ).lower()
+
+
+
+        scores = {
+
+
+            "technical mentor":[
+
+                "python",
+                "code",
+                "software",
+                "machine learning",
+                "model",
+                "algorithm"
+
+            ],
+
+
+
+            "career advisor":[
+
+                "resume",
+                "experience",
+                "skills",
+                "project",
+                "internship",
+                "education"
+
+            ],
+
+
+
+            "research analyst":[
+
+                "research",
+                "paper",
+                "experiment",
+                "analysis",
+                "dataset"
+
+            ],
+
+
+
+            "historical analyst":[
+
+                "history",
+                "century",
+                "empire",
+                "war",
+                "culture"
+
+            ],
+
+
+
+            "travel advisor":[
+
+                "travel",
+                "visit",
+                "hotel",
+                "place",
+                "restaurant"
+
+            ]
+
+        }
+
+
+
+        best = "general assistant"
+
+        max_score = 0
+
+
+
+        for persona, keywords in scores.items():
+
+
+            score=sum(
+
+                1
+
+                for word in keywords
+
+                if word in text
+
+            )
+
+
+
+            if score > max_score:
+
+                max_score = score
+
+                best = persona
+
+
+
+        return best

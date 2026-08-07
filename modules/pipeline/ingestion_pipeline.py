@@ -10,7 +10,7 @@ from modules.processing.metadata_enricher import MetadataEnricher
 from modules.embedding.embedding_generator import EmbeddingGenerator
 
 from modules.retrieval.vector_store import VectorStore
-
+from modules.persona.document_persona import DocumentPersonaBuilder
 
 
 class IngestionPipeline:
@@ -33,6 +33,8 @@ class IngestionPipeline:
         self.embedder = EmbeddingGenerator()
 
         self.vector_store = VectorStore()
+
+        self.persona_builder = DocumentPersonaBuilder()
 
 
 
@@ -135,12 +137,9 @@ class IngestionPipeline:
         )
 
 
-        print(
-            "Generated chunks:",
-            len(chunks)
-        )
+        print("Generated chunks:",len(chunks))
 
-
+        document_persona = (self.persona_builder.build(chunks))
 
         # --------------------------
         # STEP 6
@@ -182,11 +181,8 @@ class IngestionPipeline:
 
 
         return {
-
-            "document":
-            filename,
-
-            "chunks":
-            len(chunks)
+        "document":filename,
+        "chunks":len(chunks),
+        "persona":document_persona
 
         }

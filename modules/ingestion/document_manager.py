@@ -63,23 +63,49 @@ class DocumentManager:
     def add(
         self,
         name,
-        chunks
+        chunks,
+        persona=None
     ):
 
+
         docs = self.load()
+
 
 
         docs.append({
 
             "name": name,
 
+
             "chunks": chunks,
 
+
+            "persona": {
+
+                "persona_text":
+                persona.get(
+                    "persona_text",
+                    ""
+                )
+                if persona else "",
+
+
+                "embedding":
+                persona.get(
+                    "embedding",
+                    []
+                )
+                if persona else []
+
+            },
+
+
             "uploaded":
-                str(datetime.now()),
+            str(datetime.now()),
+
 
             "status":
-                "indexed"
+            "indexed"
 
         })
 
@@ -91,7 +117,6 @@ class DocumentManager:
 
 
     def all(self):
-
         return self.load()
 
 
