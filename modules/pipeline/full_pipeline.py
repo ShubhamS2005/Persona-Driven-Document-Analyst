@@ -12,13 +12,35 @@ from modules.llm.llm_client import LLMClient
 class FullRAGPipeline:
 
 
-    def __init__(self):
+    def __init__(
+        self,
+        retriever=None
+    ):
 
 
         print("Initializing RAG Pipeline...")
 
 
-        self.retriever = Retriever()
+        # ==========================
+        # Shared Retriever Instance
+        # ==========================
+
+        if retriever is not None:
+
+            self.retriever = retriever
+
+            print(
+                "Using shared Retriever"
+            )
+
+        else:
+
+            self.retriever = Retriever()
+
+            print(
+                "Created new Retriever"
+            )
+
 
 
         self.persona_detector = PersonaDetector()
@@ -100,13 +122,13 @@ class FullRAGPipeline:
 
         prompt = self.prompt_builder.build(
 
-        query,
-    
-        context,
-    
-        persona
-    
-    )
+            query,
+
+            context,
+
+            persona
+
+        )
 
 
 
@@ -122,15 +144,16 @@ class FullRAGPipeline:
 
         return {
 
-    "query": query,
+            "query": query,
 
-    "retrieved": results,
+            "retrieved": results,
 
-    "persona": persona,
+            "persona": persona,
 
-    "context": context,
+            "context": context,
 
-    "prompt": prompt,
+            "prompt": prompt,
 
-    "answer": answer
-}
+            "answer": answer
+
+        }

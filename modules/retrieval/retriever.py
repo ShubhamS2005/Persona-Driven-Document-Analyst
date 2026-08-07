@@ -14,3 +14,8 @@ class Retriever:
         )
 
         return results
+    
+    def refresh(self):
+        print("Refreshing main Retriever...")
+        self.retriever.refresh()
+        print("Main Retriever updated")

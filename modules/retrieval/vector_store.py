@@ -13,17 +13,21 @@ class VectorStore:
         path="data/vector_store"
     ):
 
+
         self.path = path
+
 
         self.index_path = os.path.join(
             self.path,
             "faiss.index"
         )
 
+
         self.embeddings_path = os.path.join(
             self.path,
             "embeddings.npy"
         )
+
 
         self.chunks_path = os.path.join(
             self.path,
@@ -37,6 +41,10 @@ class VectorStore:
         )
 
 
+
+    # -----------------------------
+    # CREATE FIRST INDEX
+    # -----------------------------
 
     def create_index(
         self,
@@ -66,6 +74,10 @@ class VectorStore:
         return index
 
 
+
+    # -----------------------------
+    # SAVE INITIAL STORE
+    # -----------------------------
 
     def save(
         self,
@@ -104,6 +116,10 @@ class VectorStore:
 
 
 
+    # -----------------------------
+    # LOAD EXISTING STORE
+    # -----------------------------
+
     def load(self):
 
 
@@ -117,19 +133,8 @@ class VectorStore:
         )
 
 
-        print(
-            "Loading embeddings..."
-        )
-
-
         embeddings = np.load(
             self.embeddings_path
-        )
-
-
-
-        print(
-            "Loading chunks..."
         )
 
 
@@ -156,3 +161,99 @@ class VectorStore:
             embeddings,
             chunks
         )
+
+
+
+    # -----------------------------
+    # INCREMENTAL VECTOR UPDATE
+    # -----------------------------
+
+    def add_embeddings(
+        self,
+        new_embeddings,
+        new_chunks
+    ):
+
+
+        # Load existing data
+
+        index, embeddings, chunks = self.load()
+
+
+
+        # -------------------------
+        # Add vectors to FAISS
+        # -------------------------
+
+        index.add(
+            new_embeddings
+        )
+
+
+
+        # -------------------------
+        # Update embeddings.npy
+        # -------------------------
+
+        updated_embeddings = np.vstack(
+            [
+                embeddings,
+                new_embeddings
+            ]
+        )
+
+
+
+        np.save(
+            self.embeddings_path,
+            updated_embeddings
+        )
+
+
+
+        # -------------------------
+        # Update chunks.pkl
+        # -------------------------
+
+        chunks.extend(
+            new_chunks
+        )
+
+
+        with open(
+            self.chunks_path,
+            "wb"
+        ) as f:
+
+
+            pickle.dump(
+                chunks,
+                f
+            )
+
+
+
+        # -------------------------
+        # Save FAISS index
+        # -------------------------
+
+        faiss.write_index(
+            index,
+            self.index_path
+        )
+
+
+
+        print(
+            "Incremental update complete"
+        )
+
+
+        print(
+            "Total vectors:",
+            index.ntotal
+        )
+
+
+
+        return index

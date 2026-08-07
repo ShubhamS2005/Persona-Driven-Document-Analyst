@@ -14,6 +14,11 @@ class DenseRetriever:
 
         self.vector_store = VectorStore()
 
+        self.load_store()
+
+
+
+    def load_store(self):
 
         (
             self.index,
@@ -23,6 +28,24 @@ class DenseRetriever:
         ) = self.vector_store.load()
 
 
+
+    def refresh(self):
+
+        print("Refreshing Dense Retriever...")
+
+        self.load_store()
+
+        print(
+            "Dense Retriever refreshed:",
+            len(self.chunks),
+            "chunks"
+        )
+
+
+
+    # --------------------------------
+    # Search
+    # --------------------------------
 
     def retrieve(
         self,
@@ -67,25 +90,34 @@ class DenseRetriever:
                 continue
 
 
-            chunk=self.chunks[idx]
+
+            chunk = self.chunks[idx]
 
 
             results.append(
+
                 {
-                    "text":chunk["text"],
 
-                    "metadata":
-                    chunk.get(
-                        "metadata",
-                        {}
-                    ),
+                "text":
+                chunk["text"],
 
-                    "score":
-                    float(score),
 
-                    "retriever":
-                    "dense"
+                "metadata":
+                chunk.get(
+                    "metadata",
+                    {}
+                ),
+
+
+                "score":
+                float(score),
+
+
+                "retriever":
+                "dense"
+
                 }
+
             )
 
 

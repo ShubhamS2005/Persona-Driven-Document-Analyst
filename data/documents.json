@@ -1,0 +1,25 @@
+[
+    {
+        "document": "South of France - History.pdf",
+        "hash": "7d82ab8292",
+        "chunks": 107
+    },
+    {
+        "name": "Dinner Ideas - Sides_2.pdf",
+        "chunks": 11,
+        "uploaded": "2026-08-07 10:52:42.201672",
+        "status": "indexed"
+    },
+    {
+        "name": "South of France - Tips and Tricks.pdf",
+        "chunks": 5,
+        "uploaded": "2026-08-07 11:01:18.275411",
+        "status": "indexed"
+    },
+    {
+        "name": "South of France - Traditions and Culture.pdf",
+        "chunks": 4,
+        "uploaded": "2026-08-07 11:18:37.699718",
+        "status": "indexed"
+    }
+]

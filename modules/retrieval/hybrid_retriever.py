@@ -253,3 +253,72 @@ class HybridRetriever:
 
 
         return results[:top_k]
+
+    def load_retriever(self):
+
+        print("Loading Hybrid Retriever...")
+
+
+        self.dense = DenseRetriever()
+
+
+        self.documents = self.dense.chunks
+
+
+
+        tokenized = [
+
+            self._tokenize(
+                doc["text"]
+            )
+
+            for doc in self.documents
+
+        ]
+
+
+        self.bm25 = BM25Okapi(
+            tokenized
+        )
+
+
+        print(
+            "Retriever loaded with",
+            len(self.documents),
+            "documents"
+        )
+
+
+
+    def refresh(self):
+
+        print("Refreshing Hybrid Retriever...")
+    
+    
+        self.dense.refresh()
+    
+    
+        self.documents = self.dense.chunks
+    
+    
+        tokenized = [
+        
+            self._tokenize(
+                doc["text"]
+            )
+    
+            for doc in self.documents
+    
+        ]
+    
+    
+        self.bm25 = BM25Okapi(
+            tokenized
+        )
+    
+    
+        print(
+            "Hybrid updated:",
+            len(self.documents),
+            "documents"
+        )
