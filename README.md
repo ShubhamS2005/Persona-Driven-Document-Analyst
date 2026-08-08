@@ -1,10 +1,6 @@
 # 🧠 Persona RAG
 ## AI-Powered Document Intelligence System with Hybrid Retrieval & Dynamic Persona Generation
 
-
-![Persona RAG Banner](docs/screenshots/dashboard.png)
-
-
 <p align="center">
 
 <img src="https://img.shields.io/badge/Python-3.12-blue">
@@ -14,6 +10,7 @@
 <img src="https://img.shields.io/badge/Vector%20DB-FAISS-purple">
 <img src="https://img.shields.io/badge/License-MIT-yellow">
 
+![Persona RAG Banner](docs/screenshots/dashboard.png)
 </p>
 Persona RAG transforms unstructured PDF documents into an intelligent knowledge system using semantic retrieval, keyword search, dynamic personas and grounded AI generation.
 ---
@@ -562,8 +559,9 @@ Creating a more natural document interaction experience.
 
 ## Shubham Srivastava
 
+Made with ❤️ by Shubham Srivastava (shubhamsrivastava12568@gmail.com)
 
-shubhamsrivastava12568@gmail.com
+⭐ If you find this project useful, consider giving it a star on GitHub!
 
 # 📄 License
 
